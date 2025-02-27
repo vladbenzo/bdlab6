@@ -6,7 +6,7 @@
 
 студент 2-го курсу, групи ІО-32 Лопушенко Кирило [Telegram](https://t.me/kezald)
 
-студент 2-го курсу, групи ІО-32 Бакаєв Деніс [Telegram](https://t.me/sultanmedved)
+студент 2-го курсу, групи ІО-32 Бакаєв Денис [Telegram](https://t.me/sultanmedved)
 
 студент 2-го курсу, групи ІО-32 Шведенко Іван [Telegram](https://t.me/hateniggers1488)
 
