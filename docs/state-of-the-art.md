@@ -151,21 +151,20 @@ NLP (Natural Language Processing) включає методи та інстру�
 
 ## Посилання
 
-1. <a name="link_1" href="http://repository.hneu.edu.ua/bitstream/123456789/29180/1/Короткова_Карiна._Тези.pdf">Медіа-контент</a>
-2. <a name="link_2" href="https://www.ibm.com/topics/natural-language-processing">Обробка природної мови</a>
+1. <a name="link_1" href="http://repository.hneu.edu.ua/handle/123456789/29180">Медіа-контент</a>
+2. <a name="link_2" href="https://www.unite.ai/uk/what-is-natural-language-processing/">Обробка природної мови</a>
 3. <a name="link_3" href="https://uk.wikipedia.org/wiki/Інтелектуальний_аналіз_тексту">Інтелектуальний аналіз тексту</a>
-4. <a name="link_4" href="https://medium.com/@arjun.darji/tokenization-in-nlp-a-deep-dive-into-text-analysis-1d240585a062">Токенізація</a>
-5. <a name="link_5" href="https://www.it.ua/knowledge-base/technology-innovation/big-data-bolshie-dannye">Великі дані</a>
+4. <a name="link_4" href="https://www.oksim.ua/2023/07/25/shho-take-tokenizacziya-v-nlp/">Токенізація</a>
+5. <a name="link_5" href="https://www.it.ua/knowledge-base/technology-innovation/big-data-bolshie-dannye">Біг дата</a>
 6. <a name="link_6" href="https://hackyourmom.com/kibervijna/vyluchennya-metadanyh/">Метадані</a>
 7. <a name="link_7" href="https://uk.wikipedia.org/wiki/Інформаційний_шум">Інформаційний шум</a>
 8. <a name="link_8" href="http://multycourse.com.ua/ua/page/21/45">Моніторинг</a>
 9. <a name="link_9" href="https://qalight.ua/baza-znaniy/shho-take-api/">API</a>
 10. <a name="link_10" href="https://site-line.com.ua/semantichnij-analiz-tekstu-shcho-tse-take">Семантичний аналіз</a>
 11. <a name="link_11" href="https://www.ibm.com/topics/text-mining">Аналіз тексту</a>
-12. <a name="link_12" href="https://www.datacamp.com/blog/what-is-tokenization">Токенізація</a>
-13. <a name="link_13" href="https://www.aimtechnologies.co/2023/11/07/social-media-analytics-and-intelligence-the-ultimate-guide/">Комбіновані підходи</a>
-14. <a name="link_14" href="https://community.aws/content/2drbbXokwrIXivItJ8ZeCk3gT5F/introduction-to-artificial-intelligence-and-machine-learning?lang=en">Машинне навчання та штучний інтелект</a>
-15. <a name="link_15" href="https://uniteddc.net.ua/news/i/scho-take-hmarni-tehnologiyi/">Хмарні технології (Сloud Technology)</a>
+13. <a name="link_13" href="https://www.marketingaiinstitute.com/blog/what-is-artificial-intelligence-for-social-media">Комбіновані підходи</a>
+14. <a name="link_14" href="https://mimo.mit.edu/wp-content/uploads/2023/03/mimoDLW23.pdf">Машинне навчання та штучний інтелект</a>
+15. <a name="link_15" href="https://gigacloud.ua/en/articles/cloud-technologies-what-they-are-and-how-they-benefit-people-and-business/">Хмарні технології (Сloud Technology)</a>
 16. <a name="link_16" href="https://brandmentions.com/hub/semantrum">Semantrum </a>
 17. <a name="link_17" href="https://neticle.com/company/en">Neticle Media Intelligence</a>
 18. <a name="link_18" href="https://youscan.io/ua/">YouScan</a>
