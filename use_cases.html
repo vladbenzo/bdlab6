@@ -363,6 +363,27 @@
 <p><img src="//www.plantuml.com/plantuml/png/hPJ1gjD058RtynG3RgwlSE_cWdNHdQyGRAu6xaqkxIWkkcXIq2vA0wL446tn3MAjsZQPz1NEUIF_Cp5IIeCWxIR3pFd_-VuvCxqT6AzltZpSApMaZvJpY7xmWcDECAfeJJbPsj9EqvugJ6tTqbWM-CDGERMwrhIaRrWRONQXeJlmUyvufiMEDZ3v3arjPZbrPXWaMBHYToCMSzeUcxWIsZkWf8OuqVrHMO35q2KyrVIBIiwaMjDQkvqjPpSIxclD3cb9-L2aApWBtnge8qwnAGOnsN-WXf7nTJzuzThe9tTt7dwAFgFe9nM0X5AJXVC4cjoHvxhcWs_kpYMzLlJfs1RSMiff3uTITplE0hEYfXroe8mgTTKDtthtGUzP51e_DDtUytSl_KSJHE5JvOSzBMZdaz51phMXoriQSwbmNvmvsjAKyPIgXi7rfU2qXK5TlV3x3y5WW5GTFmpyjf1pA0eqUyFZ-j9PTs4BTwJPKVClbwb-0_YwJ5dxfgUTwdZ6QucnR2nuXXYDmVadif9AYOnl2SNVpbOQXn1ZcF54mfoGkTx-xmkF7fMw1R7yIVm6" alt="Діаграма" /></p>
 </center>
 </div>
+<p>Видалення медіа-контенту (ContentDelete)</p>
+<p>Ідентифікатор: ContentDelete</p>
+<p>Назва: Усунення існуючого медіа-контенту</p>
+<p>Актори: Зареєстрований користувач, Система</p>
+<p>Передумови: Користувач аутентифікований та має права на видалення конкретного об'єкта контенту.</p>
+<p>Результат: Вказаний медіа-об'єкт видалено з системи.</p>
+<p>Нештатні ситуації:</p>
+<p>Спроба видалити контент за ідентифікатором, якого не існує – InvalidContentIdException</p>
+<p>Користувач не має дозволу на видалення цього контенту – PermissionDeniedException</p>
+<p>Основний потік подій:</p>
+<p>Користувач обирає функцію видалення для певного медіа-об'єкта.</p>
+<p>Система запитує підтвердження видалення (опціонально).</p>
+<p>Користувач підтверджує видалення.</p>
+<p>Система перевіряє існування контенту, що видаляється.</p>
+<p>Система перевіряє права користувача на видалення цього контенту.</p>
+<p>Система видаляє медіа-об'єкт зі сховища.</p>
+<p>Система повідомляє користувача про успішне видалення.</p>
+<div style="text-align: center; margin: auto;">
+<p><img src="//www.plantuml.com/plantuml/png/hLJ1RjD04BtlLupQ2vn2aw9AgR4gQ95oG-eNEFOcNTLPH_QsK0XIaah00H6fgeA418W_C542RjAulp3xHynkqX2fXWF2kOpVp9jvRtRZlKHviJffXImv5hBjnLuBwfv_t8oZ4nayYS8eXir6O7vihSJpbJWLwWnUCQ3dyHs6VHQvA0vulC3h8HLQz6aaLH5sA5vosDgsxuT7NX0z5x893IzC-79Il1nHzYlyuOD5eV5m2tFVtzcoyC5A3j_PzYi-UyrO1pzYghiuqPUwf_iKvJZ25EUOuHNW57E2CfiwDmdzjiFiYbWLl-1tIdK9l0IYtUWtUgW_08w8EwOUCvnGdxaUs3uKz0rWEkqI-mApTRwjmAcLqb-DNwSPqbSzn3418whgqf0V-fp8ToVk6cVV5i89kyQqOzY6HQyZqjdL0s9IqADwQ-sFMcMaECIYUQIOaxGz2Oaw2_cZ3TyiixePLCgDScF3TUekJSXfM4P2ffXMdLBTTKg6uW8m_BJU6F0dK9nIOORNKDi7cZyX5ES4Nk7OMic9vmZtNasUUg6WuvEAIrKB3bxulAr49Eyx9U4oBWCmAbcXIRmnIpOMmJGlMDV_y_WP9zGwjtjFpK7gzvYl503bPdfGe63fyncFMo99oDW-buB_pUV5RGlZiUYg430oryNAdVtUH0vqQNeK3lKxi_EYVVph7oDgipqIIT-FNm00" alt="Діаграма" /></p>
+</div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
