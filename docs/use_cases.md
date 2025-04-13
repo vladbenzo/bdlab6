@@ -385,3 +385,46 @@
 
 </center>
 </div>
+
+
+Видалення медіа-контенту (ContentDelete)
+
+Ідентифікатор: ContentDelete
+
+Назва: Усунення існуючого медіа-контенту
+
+Актори: Зареєстрований користувач, Система
+
+Передумови: Користувач аутентифікований та має права на видалення конкретного об'єкта контенту.
+
+Результат: Вказаний медіа-об'єкт видалено з системи.
+
+Нештатні ситуації:
+
+Спроба видалити контент за ідентифікатором, якого не існує – InvalidContentIdException
+
+Користувач не має дозволу на видалення цього контенту – PermissionDeniedException
+
+Основний потік подій:
+
+Користувач обирає функцію видалення для певного медіа-об'єкта.
+
+Система запитує підтвердження видалення (опціонально).
+
+Користувач підтверджує видалення.
+
+Система перевіряє існування контенту, що видаляється.
+
+Система перевіряє права користувача на видалення цього контенту.
+
+Система видаляє медіа-об'єкт зі сховища.
+
+Система повідомляє користувача про успішне видалення.
+
+<div style="text-align: center; margin: auto;">
+
+
+![Діаграма](//www.plantuml.com/plantuml/png/hLJ1RjD04BtlLupQ2vn2aw9AgR4gQ95oG-eNEFOcNTLPH_QsK0XIaah00H6fgeA418W_C542RjAulp3xHynkqX2fXWF2kOpVp9jvRtRZlKHviJffXImv5hBjnLuBwfv_t8oZ4nayYS8eXir6O7vihSJpbJWLwWnUCQ3dyHs6VHQvA0vulC3h8HLQz6aaLH5sA5vosDgsxuT7NX0z5x893IzC-79Il1nHzYlyuOD5eV5m2tFVtzcoyC5A3j_PzYi-UyrO1pzYghiuqPUwf_iKvJZ25EUOuHNW57E2CfiwDmdzjiFiYbWLl-1tIdK9l0IYtUWtUgW_08w8EwOUCvnGdxaUs3uKz0rWEkqI-mApTRwjmAcLqb-DNwSPqbSzn3418whgqf0V-fp8ToVk6cVV5i89kyQqOzY6HQyZqjdL0s9IqADwQ-sFMcMaECIYUQIOaxGz2Oaw2_cZ3TyiixePLCgDScF3TUekJSXfM4P2ffXMdLBTTKg6uW8m_BJU6F0dK9nIOORNKDi7cZyX5ES4Nk7OMic9vmZtNasUUg6WuvEAIrKB3bxulAr49Eyx9U4oBWCmAbcXIRmnIpOMmJGlMDV_y_WP9zGwjtjFpK7gzvYl503bPdfGe63fyncFMo99oDW-buB_pUV5RGlZiUYg430oryNAdVtUH0vqQNeK3lKxi_EYVVph7oDgipqIIT-FNm00)
+
+
+</div>
