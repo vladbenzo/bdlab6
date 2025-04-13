@@ -521,232 +521,243 @@
 <p>Система має бути простою в обслуговуванні та використанні. Це означає наявність зрозумілої документації для технічних спеціалістів, можливість оперативного оновлення без ризику для її стабільності, а також доступ до інструментів моніторингу та діагностики. Крім того, слід забезпечити можливість розширення функціоналу та інтеграції з іншими сервісами без значних змін у її архітектурі.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Розроблення-функціональних-вимог-до-системи"><a class="header" href="#Розроблення-функціональних-вимог-до-системи">Розроблення функціональних вимог до системи</a></h1>
 <h2 id="Модель-прецедентів"><a class="header" href="#Модель-прецедентів">Модель прецедентів</a></h2>
-<h3 id="Загальна-діаграмм-прецедентів"><a class="header" href="#Загальна-діаграмм-прецедентів">Загальна діаграмм прецедентів</a></h3>
+<h3 id="Загальна-діаграма-прецедентів"><a class="header" href="#Загальна-діаграма-прецедентів">Загальна діаграма прецедентів</a></h3>
 <p>Рисунок 1 ілюструє загальну схему прецедентів та визначає ключові взаємодії.</p>
-<center>
 <p><img src="//www.plantuml.com/plantuml/png/RLD1QnD15BxFhnZIWwSeL1gBXz8sRK-Ub7eIP4o6TTbafyniA465jh5wAKHAQC6BYFw0PKrmcwRrBypy8x_PsGcZRI2xEs--zxxlVMzcKsLCPeD-ZwWaJW-OP7tAEfcGBx9XZrDso9Neys1pe7Y7AKxV4OhVDkiaaHI3jDiMFI7fojxENcltiTiJiijb7LzRR-q-MQlYMrAAmpgysbhVtbab7mYfIEdBMCNspHHjw7DpeQUwi4ypqeNEpUS6NOaa6zRevppQLxn6NsB_IC_Cn1oR4tFqy5Mgl-fRX4eR20gePFYcD-1rZQrkFqvT1S3rZJdHC_jiwXpa2v3V82TvovAOa0Eqoo8ExCHSc4kgVu71LZz3Qe4_rXHfjpNb7pDgEAUMlkstNqEs8_mEii9fn5T9GJc7o97bR_oVzKn4NkYFofGhbrDGS-nwXF052E5c8FIdBQVdvfCJ_FjVbohPEG2bERr7QLka6Kypn_eDQKX5ZzTchAVq4TNdkeJYfScs4hIFOVq2m2b4vaq00bllwFlYNMwQZw7KUzI4ex9Qx4m3oldTQMDteSkAqP-iPdF3p-0f3Qqm8tnXabYDG_JIU-3X-ocwcO85I4By0GGijCi2AwSde0SS_Km8gUHxg5i0k3nb07aT03-Wc39AmEqSVf-Xovdhb5PJkyRoAk1_l-7lZkS9GviyxUAE_mK0" alt="Діаграма" /></p>
-</center>
-Рисунок 1: Загальна схема прецедентів
-<p>Специфікація прецедентів використання
-Загальна схема прецедентів</p>
+<p><em>Рисунок 1: Загальна схема прецедентів</em></p>
+<h3 id="Специфікація-прецедентів-використання"><a class="header" href="#Специфікація-прецедентів-використання">Специфікація прецедентів використання</a></h3>
 <p>Відповідно до схеми, система розрізняє 3 ролі акторів:</p>
-<p>Відвідувач - неаутентифікований користувач. Може створити новий акаунт або увійти в існуючий.
-Зареєстрований користувач - аутентифікований користувач. Має доступ до функцій роботи з медіа-контентом.
-Адміністратор контенту - аутентифікований користувач з розширеними повноваженнями. Має доступ до управління іншими обліковими записами.</p>
+<ul>
+<li><strong>Відвідувач</strong> - неаутентифікований користувач. Може створити новий акаунт або увійти в існуючий.</li>
+<li><strong>Зареєстрований користувач</strong> - аутентифікований користувач. Має доступ до функцій роботи з медіа-контентом.</li>
+<li><strong>Адміністратор контенту</strong> - аутентифікований користувач з розширеними повноваженнями. Має доступ до управління іншими обліковими записами.</li>
+</ul>
 <p>Рисунок 2 деталізує доступні дії для неаутентифікованого відвідувача.</p>
-<center>
 <p><img src="//www.plantuml.com/plantuml/png/LP3DIiGm58NtUOhBxESLPC2jAq5NWeIPC1IqXQRTsyQVPQL8r_e6fRPGYkapdFj6tgW1PnF8pNVEbsHd2vqNvVsTqliYosc3bZkC6CBA3WDwVjcGjdITs4G8fKfhzjeQGTynyHjNNFE3OC_SSNEJueDh35XbDi73SqFmMCC8drW9FHQX7Rpat4_rrVdjfJd-AsxvAVW9emIumXmacF25MGIlxC8k5CZ9ev1Br1EMOFuDnEkZZvQBx9YaIlqzXRQ7xLcKdyuYkZFfGJxd6m00" alt="Діаграма" /></p>
-<p>Рисунок 2: Схема можливостей Відвідувача</p>
-</center>
-<center>
-Схема прецедентів для Зареєстрованого користувача
-<p><img src="//www.plantuml.com/plantuml/png/XPHHQzDG5CVVyoakzK5zADXIHMMKQSKFiDatGMxJaxOqIyPDYg88syhGjy4e3dnGmIyGv-fgJViPplr6_kzD5cjafg7jlUVyStxdVtB9TXHB5K_sV2SQZu9zgUIUw4btF53X9EXtGZzKueRtm5mRYab4hen8l744Fe_BUcfuTpmlouMgJogFj-xTR_PQDlv8gV1b7cvwBLms_3GCujtHQnADLh7FL3qVb8sIpuOZTnnG58c6ZUvaV1MG4isxpbl7aMwC-sfynea-uBcUwKDzXDMQppdX5I_uf-0bhn5QsDJK9FIxcf2HsA51Do8qvuy6mxZdJyXn5Bcn30O-eUX7b5df8vwRtxe-p4fWct9Io-UIJmdgBr1_upK4YU1BK3VlnZfz7jpYKxu4ViOf0XVwWpwnqXGYx3Yf6nE0JFK1S0aIYzksrMxdHGTZeY1sIjYPgGIfzGlKIOcifuPxTgKmxV4Ff7BjoemAt--ytkp3UBc9FfT6_wS5HJAcKWEVuVazvhgy1ho2uMFRP86zXeJzUS7Q9QdSOOdrAU_t5y__QpP5AN0jnpg-o4w3FgussTtl_slob1UcHWNugtbqoEUQQjOJyWai7EIhirYlj_zwsCNKIndnK6njqIii-r6xxHG3gvHbzYfbfhCgsJR-yLRv3G00" alt="Діаграма" /></p>
+<p><em>Рисунок 2: Схема можливостей Відвідувача</em></p>
+<h3 id="Схема-прецедентів-для-Зареєстрованого-користувача"><a class="header" href="#Схема-прецедентів-для-Зареєстрованого-користувача">Схема прецедентів для Зареєстрованого користувача</a></h3>
 <p>Рисунок 3 показує функціонал, доступний зареєстрованому користувачеві.</p>
-</center>
-<p>Схема прецедентів для Адміністратора контенту</p>
+<p><img src="//www.plantuml.com/plantuml/png/XPHHQzDG5CVVyoakzK5zADXIHMMKQSKFiDatGMxJaxOqIyPDYg88syhGjy4e3dnGmIyGv-fgJViPplr6_kzD5cjafg7jlUVyStxdVtB9TXHB5K_sV2SQZu9zgUIUw4btF53X9EXtGZzKueRtm5mRYab4hen8l744Fe_BUcfuTpmlouMgJogFj-xTR_PQDlv8gV1b7cvwBLms_3GCujtHQnADLh7FL3qVb8sIpuOZTnnG58c6ZUvaV1MG4isxpbl7aMwC-sfynea-uBcUwKDzXDMQppdX5I_uf-0bhn5QsDJK9FIxcf2HsA51Do8qvuy6mxZdJyXn5Bcn30O-eUX7b5df8vwRtxe-p4fWct9Io-UIJmdgBr1_upK4YU1BK3VlnZfz7jpYKxu4ViOf0XVwWpwnqXGYx3Yf6nE0JFK1S0aIYzksrMxdHGTZeY1sIjYPgGIfzGlKIOcifuPxTgKmxV4Ff7BjoemAt--ytkp3UBc9FfT6_wS5HJAcKWEVuVazvhgy1ho2uMFRP86zXeJzUS7Q9QdSOOdrAU_t5y__QpP5AN0jnpg-o4w3FgussTtl_slob1UcHWNugtbqoEUQQjOJyWai7EIhirYlj_zwsCNKIndnK6njqIii-r6xxHG3gvHbzYfbfhCgsJR-yLRv3G00" alt="Діаграма" /></p>
+<p><em>Рисунок 3: Функціонал, доступний зареєстрованому користувачеві</em></p>
+<h3 id="Схема-прецедентів-для-Адміністратора-контенту"><a class="header" href="#Схема-прецедентів-для-Адміністратора-контенту">Схема прецедентів для Адміністратора контенту</a></h3>
 <p>Рисунок 4 відображає спеціальні можливості адміністратора контенту.</p>
-<div style="text-align: center; margin: auto;">
-<center>
 <p><img src="//www.plantuml.com/plantuml/png/dLDDQnH14BtthoXsBte8x4gY8c59L3oB7pSldPcQpR2ptT8zI_n0YBkW7WGzoEOYUCWV66E2IvAT_8NgVsHrTrZ62KHm1gRfLw_UUrtqRDbIcd8oBeGTvUgbD78CEp8P3OsUgFI1BhI1RfPbQNQdmPXOJAH5U2k0d_jN-9ZTJk_6cZOfcaiyaNAzrmlujZ5wxnBUaFuDy2EjogVv6uJ--ceVMJi5kpGad-tcoKYXjT0Fw9FeRnGQkBKXtWaXavBxElILZkdSpMdfvkwzcxfzgjoKQhSFT4ermrCwyLytwu2qi9sESmNT8X_kbg-nAFIU40QJKgfXWIptdNkEtOpEt6UWggtDXID6buny2VfijmYbK70VcNpKYODRZP4p_fVE2tM33kd2duZ1CuOYdnF-35lkuyA2pca1z9jP5rw4LmPkXjC-jsZ2YKKhqI6RpLZlv9eCLFa4tvXJqIcFSH7W3sv-DKDDlwXkP72pwFyG2opHfu0kzhDUbhLo7CIvK0NiNdl5QwByy32RB3sqYXxc-ebx3bOQqVonqMFTSkUB4s_0sjgWEPr6qBygS0ysD_5LYIgrWu68al_cRV7AVzqV" alt="Діаграма" /></p>
-<p>Рисунок 4: Схема можливостей Адміністратора контенту</p>
-</center>
-<p>Сценарії взаємодії для Відвідувача
-Реєстрація нового користувача (UserRegister)</p>
-<p>Ідентифікатор: UserRegister</p>
-<p>Назва: Процес реєстрації нового користувача</p>
-<p>Актори: Відвідувач, Система</p>
-<p>Передумови: Відвідувач системи не має існуючого облікового запису.</p>
-<p>Результат: Створено новий обліковий запис користувача, готовий до використання.</p>
-<p>Нештатні ситуації</p>
-<p>Надані дані не відповідають очікуваному формату або правилам – InvalidDataException
-Не всі обов'язкові поля реєстраційної форми заповнені – DataMissingException
-Обліковий запис з вказаною електронною поштою вже існує – AlreadyRegisteredException</p>
-<p>Основний потік подій</p>
-<p>Відвідувач ініціює процес реєстрації (наприклад, натискає кнопку 'Реєстрація').
-Відвідувач заповнює реєстраційну форму (вводить ім'я, прізвище, email, пароль).
-Система приймає дані для реєстрації.
-Система валідує отриману інформацію.
-Система перевіряє, чи не існує вже акаунт з таким email.
-Система створює новий запис про користувача в базі даних.
-Система сповіщає користувача про успішне завершення реєстрації.</p>
-<center>
-<p><img src="//www.plantuml.com/plantuml/png/dLHDRzD04BtxLwp4WQJg0IHEyO4MA187EC2Lon9lmggE7TdRGY58AO424Y9I5QKdg2h-W8bYsdoa-Gkp_uWtQqj1wiUX6oNopiwyUU_jn1kfaOdPQOLUkgsZjanaIxoIzUrc4kz4mSCuZ1Dngw7uyr-6h1kzgysUUEy9h0SN2jmgpk8aK4aPl-EMYsycIVoc3DzpouKVnv5veTyfSNUrVoPR2lbQXju7p-lGeHtIc4RyQtiqein-wNXEXrUZ0rhOeJt0zuST2Dkbt0xills8fwm8-yWweeoMT8xYHP7tYSwHCRUzbr45mFFRjhykQ6cxs9mYxSn-etnTg9RK8Hy0h8lwcVrUzPdJ2JBGXNAQKzP1Xr-kvHb30Xyd6LVbJ8Yf0xYFE7HaJ1WOkY4gD2YsWgRWmwbJL29mlohCQnM92WFHj0flQdI8nncxK2hhCs5cDK4efmLblgV2L04N44NDCOjc6Wp41DY5ENZEQChYrvv4kpBKmIDfvDRRkceR7KThFcfJ4xSz5GMwKNBz3S730c36lKzNdb9-9MbKqH9alzBYWYKqHGW8VnW5Dm18-E3S_rmsWjpH3LIndASwJNNKl5xL5b-mi3t6PZfymxG0qkHIDSVExx5h_vTLewv_sTGTtO3qPfWe6UmzLqsT6fMeu6hgDJe1oeY7XkUvC97DAlsZINa_FAO-qdzYCxRxtAripeF46Co8nYir_ZL_EH3O00D-VVm3" alt="Діаграма" /></p>
-</center>
-<p>Аутентифікація користувача (UserLogin)</p>
-<p>Ідентифікатор: UserLogin</p>
-<p>Назва: Вхід користувача до системи</p>
-<p>Актори: Відвідувач (що має акаунт), Система</p>
-<p>Передумови: Користувач вже має зареєстрований обліковий запис.</p>
-<p>Результат: Користувач успішно аутентифікований та отримує доступ до функцій системи для зареєстрованих користувачів.</p>
-<p>Нештатні ситуації
-Вичерпано ліміт невдалих спроб входу – TooManyActionsException
-Надано невірний пароль або email – DataNotFoundException
-Обліковий запис з таким email не знайдено – NotRegisteredException</p>
-<p>Основний потік подій
-Користувач відкриває форму автентифікації.
-Користувач вводить свої облікові дані (email та пароль).
-Система приймає запит на вхід.
-Система верифікує надані облікові дані.
-Система перевіряє існування акаунту з вказаним email.
-Система авторизує користувача, надаючи доступ до захищених ресурсів.
-Система інформує користувача про успішний вхід.</p>
-<center>
-<p><img src="//www.plantuml.com/plantuml/png/dLDDQnD16BxFhtZ1IzkJWgVcOEj7R_QW7hsCoQGktUo4tQbQZT3kLaG8HAJiGL3n7wnXOoNDnrzuvn_vl9D8X1gGJYwPTvwFvs5cTpAdKtVKYLLs62LTdUeEFTFDmuFK7YMjUpQsATre6_dzXT1D5xs8t36zKOHrzmeXhCMPJLicNSvlXXNcksbgNox7jyCAupsRkCVHQqEtLljztJ70HpfMRvNgyMUU-HF-vKzzxWiUSkNVzrJeeRRvao-vvh40mj4v-RE0d_Y2UEZVyOnhNpG42W0sKCfzdqn7Hp7vd2lYEOWdEBlq_OOuVb-uyOWdNFL0_GeA74GK3dp15JZG8Pw2BpOI0zoeJHlyZKT0ZtW8o0SU0JCZQ9UWb-3uKvu7knztDiazDmbjI0mURogYRR1dO491Xk8sns02yqlKB9ucMq-iVQYJurrSYaso1w-QfYl_jXgWPyvsbKbQKLk5nf11Y3DuZqDqSGrHnkBYI-8QpbDV_ib-ljYI0AG4UBaCraGDHKK8SGUYFqNc0VA34YwiJmB7iC0ebuimSMPW1C1_zhsldTwtRayUtFgs8Vt7bHL90Fn1wtzb1tI8RNXPV24eLBxwqBXg1FGN46le8TKof5mu149ohlcdt3Fi1gj7TvskwFd874IPCwbPNtRzHm783Z3oWVy6" alt="Діаграма" /></p>
-</center>
-Сценарії взаємодії для Адміністратора контенту
-Призначення іншої ролі користувачеві (UserRolePromote)
-<p>Ідентифікатор: UserRolePromote</p>
-<p>Назва: Зміна ролі існуючого користувача</p>
-<p>Актори: Адміністратор контенту, Система (можливо, сповіщення для Користувача)</p>
-<p>Передумови:</p>
-<p>Адміністратор контенту аутентифікований та має відповідні права.</p>
-<p>Цільовий користувач має активний обліковий запис.</p>
-<p>Результат: Роль цільового користувача успішно змінена.</p>
-<p>Нештатні ситуації:</p>
-<p>Поточний користувач не має прав адміністратора – RoleNotEnoughRightsException</p>
-<p>Цільовий користувач не знайдений в системі – NotRegisteredException</p>
-<p>Спроба призначити роль, яку користувач вже має, або найвищу можливу роль – RoleAlreadyHighestException</p>
-<p>Основний потік подій</p>
-<p>Адміністратор контенту вибирає цільового користувача в інтерфейсі управління.</p>
-<p>Адміністратор контенту обирає нову роль для цього користувача.</p>
-<p>Система отримує команду на зміну ролі.</p>
-<p>Система перевіряє повноваження адміністратора.</p>
-<p>Система перевіряє існування цільового користувача.</p>
-<p>Система перевіряє, чи можлива зміна на обрану роль.</p>
-<p>Система оновлює роль користувача в базі даних.</p>
-<p>Система повідомляє адміністратора (та, можливо, користувача) про успішну зміну ролі.</p>
-<center>
-<p><img src="//www.plantuml.com/plantuml/png/dLHDRn916BxlhvZ4YxrfuaaEjfeQJptWrSiA0qmAEsHsKAkOy97eXLXZcZqOhV4V84Ax5bZ_mZl_oEST5hk9QvDs26pcdUTzFcQ6tOrjQ6olqmxYGnLrGnDsnFEmTjWqkXVL7-csDk9MG_AdW0XhLhrGzaYy2GJ6mtyQ_DYiQLEN9g_VySFNzupHB_FoFJzy-R6Ex5FrMegxb_E3i2E1Ls4xU1i4VVf8SrgvXDOkSKCtSWEQkX5bRY3eWZ9QOxBWNpVk1pvUS9y-KKe_AFNO4yO1ZkcGKJH3yJrD1NYNxbZG-OQUKW5GXbfI0SLfaM2D-ioDju19XOrzzuoilg9fdrkyknHquroLLz0yHoiUqxzQc1Urlj42qmKa4ZTmnzpycnKtkg0uuuXeWzjf-NRm4wvKGzoc4qonn0k0JIW37Q_JxC6Ei2qP0OFs7MmvQxC4zBbXgxn2YYLTkF6pgAhRya3R_KZtcgsgQhPilF-g9hjMwQW2XjZgRY2Zkce4fKdO9WVc77a6zyubl8kiZEzFoagFw3BGv_BpE-SzfLyqzxkJtI0SWbLbKyLM6bc_LYomP7G6djGNsTcaz2hb4RumdFqMG32Ltl14zjf6XlMZ9pWF6Tihd9_cTsZfFe1gUt__jzze-Cetp0rPBbTt2GgZZIMQ5-zYQTph_cFXTXTs-QNq1m00" alt="Діаграма" /></p>
-</center>
-<p>Усунення користувача (UserDelete)</p>
-<p>Ідентифікатор: UserDelete</p>
-<p>Назва: Видалення облікового запису користувача</p>
-<p>Актори: Адміністратор контенту, Система (можливо, сповіщення для Користувача)</p>
-<p>Передумови: Адміністратор контенту аутентифікований та має права на видалення користувачів. Цільовий користувач існує.</p>
-<p>Результат: Обліковий запис цільового користувача видалено (або деактивовано) з системи.</p>
-<p>Нештатні ситуації:</p>
-<p>Поточний користувач не має прав на видалення – PermissionDeniedException</p>
-<p>Цільовий користувач не знайдений в системі – NotRegisteredException</p>
-<p>Основний потік подій</p>
-<p>Адміністратор контенту вибирає користувача для видалення.</p>
-<p>Система отримує команду на видалення користувача.</p>
-<p>Система перевіряє повноваження адміністратора.</p>
-<p>Система перевіряє існування цільового користувача.</p>
-<p>Система видаляє (або позначає як видалений) обліковий запис користувача.</p>
-<p>Система сповіщає адміністратора (та, можливо, користувача) про успішне видалення.</p>
-<div style="text-align: center; margin: auto;">
-<center>
-<p><img src="//www.plantuml.com/plantuml/png/hLHFQnD15B_FftZKIt8G0WM57gIDQKz5Ylq4w-viN9BinjaDMaH84z0AGYH8JgBquZcDIPicRV8LtdmZVw-Rib4NxQ4BsTsPURy_xpUpsOuJnoIjHbt5jI1iEiPfq0l7hLLDr0gzfr4zClHWhxBtQ7TphIBMhrewT3MzLOHhnvZeTLfRqRfvM3igrriwNNAJo9GZuscJ5fJhO9SbsWzylH-4-Z-hVvhH9V-nxqWD7S1wu0PD9qpoITOA_iNpB4h-rl5zVzFrilLCGDPSjrHIxvHof3_QuCyyvYixu6ixiCUsOziyj1rUs3RnZ1UOxl14xhQxGKvCEruZ25KpimUAKvu2AdLNF9GgEZoA4zrGwgQQ7Zv9ORH5tESfdw5UPBw819G4BW8ymkG77X8ipMsFC9xYTSXpiG0JlJN6L48elm4B3dJHNL6A3m36jaju3FE8KlZlHDzv0g89Zn15s_Q4R0co4I2u0tv-2oSCycF3KuL8dKnGVPb8u0uknLz1SGxzgH315QHE012GEBJ7F9K8CF4UZBqjnNsmGqEaLxuN90sDePB6jRG3AWYLz7lZLkHvL5I50sqQGHm7KLZHOQ2ztJUkRYOO5fKEFHA7Tun0-kFhT7DMpOj5RD0diORVJrxaR-Hz9V4ZamFgCbUCX8ZuGZZuaiSIc1Ih0hw1vxeQe4DpznpwjmT6Cg02tiwaIz3YTGQhS2_7hKYymD8S3cUPlmiKBSLVnfrz0QVfeK9l7xDTawr5vqlCdaWdUKTs6uxnV_SB" alt="Діаграма" /></p>
-</center>
-Сценарії взаємодії для Зареєстрованого користувача
-Додавання медіа-контенту (ContentCreate)
-<p>Ідентифікатор: ContentCreate</p>
-<p>Назва: Створення нового об'єкта медіа-контенту</p>
-<p>Актори: Зареєстрований користувач, Система</p>
-<p>Передумови: Користувач аутентифікований і володіє необхідними дозволами для створення контенту.</p>
-<p>Результат: Новий медіа-об'єкт успішно додано до сховища системи.</p>
-<p>Нештатні ситуації</p>
-<p>Користувач не має дозволу на створення контенту – PermissionDeniedException</p>
-<p>Спроба створити контент з ідентифікатором, що вже використовується – ContentIdExistsException</p>
-<p>Надані дані контенту не пройшли перевірку (невірний формат, відсутні обов'язкові поля) – InvalidContentDataException</p>
-<p>Основний потік подій</p>
-<p>Користувач активує функцію створення контенту.</p>
-<p>Система відображає форму для введення даних нового контенту.</p>
-<p>Користувач заповнює форму та/або завантажує файли.</p>
-<p>Система перевіряє права користувача на додавання контенту.</p>
-<p>Система перевіряє унікальність ідентифікатора контенту (якщо застосовно).</p>
-<p>Система валідує надані дані та файли.</p>
-<p>Система зберігає новий медіа-об'єкт.</p>
-<p>Система інформує користувача про успішне створення.</p>
-<div style="text-align: center; margin: auto;">
-<center>
-<p><img src="//www.plantuml.com/plantuml/png/hLNVJXDF5BwVfvZmk-5tOTGBbN1X46eC2I4an0SOjrESqExMsG4XneG_1haWO0Y1n6YCRx1KYwNGyWfdtiXlpiAos6guO3TDftE-yttdctDsEv4wPTrIeoxIHHCtbLKD-Kf5YmisMOghKqaziVA_sgDmbn2fVhEauqZBTqBYUcPjyZR7LfHTdAyhfrzOjPe78vVOoSHMjSqXisevZyoOcfuniIu7AwPHP1RnF-lHZsjFQZN6pA5w4vccYbsPPhAEd070W2--63QRE3qiFgOV5l6o069HDFQ0OvF9oc2g2dSHBcNEc_gojkAz42gSZ1oX8yhy6hNzWL_t6rZrgKKPzQX3fvAwrCTMXqER8U0_ZaYLofSfI9hNvi3pFOTHcyufOz3yQkfqGuW0blUUSf8Sb_I9ki1rgEKt_O7q7y3SmzQMF_IxaZbQBDl6Ti_lSHLO1EfUgACWp0K29KpG1GhO01tddbDd29N8Csxcxlj3-Wc5O-0oEe77WuB5Rqh4pb348DbVoy098hvxa-Q-f5-8yjc22KANxh4yfJFg3Atj6xLPi8MpMVDxIA0BR33FqEvG9c8CYxHcuRKBSw9m2Vg2eaw2IfxO0-rsg0AV7cKmHntcoBWBU-E2la8LfyAs6UPtg5-e_-DKHkUqRPWqDKbSqR7HrUShaMuw_FnVwBWgGtctz1e60ytfGl4CybYprHqvNRaZbv_BauKEIMvD5mpd497K0bzR1bq0q2ynEfN4JiTk6hPCwjBRcjjd3nWqxdee1oUO1KloQd67ZSi70z-0bIK67wNHwNXPrKtrqbP5ENLRIqTq73e6KpyWpwOm-VpUk2bpdLsy0hQmNpmRLrFTbrYlOtdejuFJOTCrWPBmV_4R" alt="Діаграма" /></p>
-</center>
-Пошук медіа-контенту (ContentSearch)
-<p>Ідентифікатор: ContentSearch</p>
-<p>Назва: Пошук існуючого медіа-контенту</p>
-<p>Актори: Зареєстрований користувач, Система</p>
-<p>Передумови: Користувач аутентифікований в системі.</p>
-<p>Результат: Система надає користувачеві список медіа-об'єктів, що відповідають критеріям пошуку.</p>
-<p>Нештатні ситуації:</p>
-<p>Пошук за ідентифікатором, якого не існує в системі – InvalidContentIdException</p>
-<p>Введені некоректні або несумісні параметри для пошуку/фільтрації – InvalidSearchRequestException</p>
-<p>Основний потік подій:</p>
-<p>Користувач ініціює дію пошуку контенту.</p>
-<p>Система надає інтерфейс для введення пошукових критеріїв та фільтрів.</p>
-<p>Користувач вводить пошуковий запит та/або застосовує фільтри.</p>
-<p>Система перевіряє валідність введених критеріїв.</p>
-<p>Система виконує пошук у сховищі контенту за заданими параметрами.</p>
-<p>Система формує список знайдених результатів.</p>
-<p>Система відображає результати пошуку користувачеві.</p>
-<div style="text-align: center; margin: auto;">
-<center>
-<p><img src="//www.plantuml.com/plantuml/png/hLFB3j905DtFLqpY1bRkwOP4NR3LBsYW20cs28DnmO82GHT44q9AOdHXuWTKqafvjFp2lN_akHrZ8CY6ID8mcJcFSswdzQ5n1sRqfgVKc3OKyuHINdF8KwmAsb9CEMMqrtIW0bjPUJIJ0_umLYLRrJGjAEU85tW-yLfJ8WjDPt0-0dtWcIC6tosVKZfHF1RUDnWa58F34IHmn1EU0x3dy8R_G41OhB0kO99XVmcOWAmHGcxqKqqxOC42FnH9dacSEG8TUGaIy7VIh-1-12uHoaLSKR6X88rj-3dA3uod1ztN7QEVjDikVeg-0lcBZi0YhqQJ509JYl7as42UJDfWGqRxkQOmiDGsbN-1SIJ6CfSOkLARzsfqgjBmtxczRkkLvmwQdPVUsv4tD2_UDxs-wGP-LNb-IqiwMoaJVUXULz9_TgL-Bfd-Io5TeVDDtd9gkl6yYhfVBarne4MC3j0_0L4Q21pQjAT4O5JyxViiy8tdcqRhJjSVvHnFzds7yfxa0g1hETqTqk02sFGSqTOfvuDL0j1F6JYgojMzXLFsp_i8s9OZvz5lBUWhLKS1-Ln_0m00" alt="Діаграма" /></p>
-</center>
-Зміна інформації про медіа-контент (ContentUpdate)
-<p>Ідентифікатор: ContentUpdate</p>
-<p>Назва: Редагування метаданих існуючого медіа-контенту</p>
-<p>Актори: Зареєстрований користувач, Система</p>
-<p>Передумови: Користувач аутентифікований та має права на редагування конкретного об'єкта контенту.</p>
-<p>Результат: Інформація про вказаний медіа-об'єкт оновлена в системі.</p>
-<p>Нештатні ситуації:</p>
-<p>Спроба редагувати контент за ідентифікатором, якого не існує – InvalidContentIdException</p>
-<p>Користувач не має дозволу на редагування цього контенту – PermissionDeniedException</p>
-<p>Оновлені дані не пройшли валідацію – InvalidContentDataException</p>
-<p>Основний потік подій:</p>
-<p>Користувач обирає функцію редагування для певного медіа-об'єкта.</p>
-<p>Система надає форму з поточними даними контенту для редагування.</p>
-<p>Користувач вносить зміни в поля форми.</p>
-<p>Система перевіряє існування контенту, що редагується.</p>
-<p>Система перевіряє права користувача на редагування цього контенту.</p>
-<p>Система валідує змінені дані.</p>
-<p>Система оновлює інформацію про медіа-об'єкт у сховищі.</p>
-<p>Система повідомляє користувача про успішне оновлення.</p>
-<div style="text-align: center; margin: auto;">
-<p>Зміна інформації про медіа-контент (ContentUpdate)</p>
-<p>Ідентифікатор: ContentUpdate</p>
-<p>Назва: Редагування метаданих існуючого медіа-контенту</p>
-<p>Актори: Зареєстрований користувач, Система</p>
-<p>Передумови: Користувач аутентифікований та має права на редагування конкретного об'єкта контенту.</p>
-<p>Результат: Інформація про вказаний медіа-об'єкт оновлена в системі.</p>
-<p>Нештатні ситуації:</p>
-<p>Спроба редагувати контент за ідентифікатором, якого не існує – InvalidContentIdException</p>
-<p>Користувач не має дозволу на редагування цього контенту – PermissionDeniedException</p>
-<p>Оновлені дані не пройшли валідацію – InvalidContentDataException</p>
-<p>Основний потік подій:</p>
-<p>Користувач обирає функцію редагування для певного медіа-об'єкта.</p>
-<p>Система надає форму з поточними даними контенту для редагування.</p>
-<p>Користувач вносить зміни в поля форми.</p>
-<p>Система перевіряє існування контенту, що редагується.</p>
-<p>Система перевіряє права користувача на редагування цього контенту.</p>
-<p>Система валідує змінені дані.</p>
-<p>Система оновлює інформацію про медіа-об'єкт у сховищі.</p>
-<p>Система повідомляє користувача про успішне оновлення.</p>
-<div style="text-align: center; margin: auto;">
-<center>
-<p><img src="//www.plantuml.com/plantuml/png/hPJ1gjD058RtynG3RgwlSE_cWdNHdQyGRAu6xaqkxIWkkcXIq2vA0wL446tn3MAjsZQPz1NEUIF_Cp5IIeCWxIR3pFd_-VuvCxqT6AzltZpSApMaZvJpY7xmWcDECAfeJJbPsj9EqvugJ6tTqbWM-CDGERMwrhIaRrWRONQXeJlmUyvufiMEDZ3v3arjPZbrPXWaMBHYToCMSzeUcxWIsZkWf8OuqVrHMO35q2KyrVIBIiwaMjDQkvqjPpSIxclD3cb9-L2aApWBtnge8qwnAGOnsN-WXf7nTJzuzThe9tTt7dwAFgFe9nM0X5AJXVC4cjoHvxhcWs_kpYMzLlJfs1RSMiff3uTITplE0hEYfXroe8mgTTKDtthtGUzP51e_DDtUytSl_KSJHE5JvOSzBMZdaz51phMXoriQSwbmNvmvsjAKyPIgXi7rfU2qXK5TlV3x3y5WW5GTFmpyjf1pA0eqUyFZ-j9PTs4BTwJPKVClbwb-0_YwJ5dxfgUTwdZ6QucnR2nuXXYDmVadif9AYOnl2SNVpbOQXn1ZcF54mfoGkTx-xmkF7fMw1R7yIVm6" alt="Діаграма" /></p>
-</center>
-</div>
-<p>Видалення медіа-контенту (ContentDelete)</p>
-<p>Ідентифікатор: ContentDelete</p>
-<p>Назва: Усунення існуючого медіа-контенту</p>
-<p>Актори: Зареєстрований користувач, Система</p>
-<p>Передумови: Користувач аутентифікований та має права на видалення конкретного об'єкта контенту.</p>
-<p>Результат: Вказаний медіа-об'єкт видалено з системи.</p>
-<p>Нештатні ситуації:</p>
-<p>Спроба видалити контент за ідентифікатором, якого не існує – InvalidContentIdException</p>
-<p>Користувач не має дозволу на видалення цього контенту – PermissionDeniedException</p>
-<p>Основний потік подій:</p>
-<p>Користувач обирає функцію видалення для певного медіа-об'єкта.</p>
-<p>Система запитує підтвердження видалення (опціонально).</p>
-<p>Користувач підтверджує видалення.</p>
-<p>Система перевіряє існування контенту, що видаляється.</p>
-<p>Система перевіряє права користувача на видалення цього контенту.</p>
-<p>Система видаляє медіа-об'єкт зі сховища.</p>
-<p>Система повідомляє користувача про успішне видалення.</p>
-<div style="text-align: center; margin: auto;">
-<p><img src="//www.plantuml.com/plantuml/png/hLJ1RjD04BtlLupQ2vn2aw9AgR4gQ95oG-eNEFOcNTLPH_QsK0XIaah00H6fgeA418W_C542RjAulp3xHynkqX2fXWF2kOpVp9jvRtRZlKHviJffXImv5hBjnLuBwfv_t8oZ4nayYS8eXir6O7vihSJpbJWLwWnUCQ3dyHs6VHQvA0vulC3h8HLQz6aaLH5sA5vosDgsxuT7NX0z5x893IzC-79Il1nHzYlyuOD5eV5m2tFVtzcoyC5A3j_PzYi-UyrO1pzYghiuqPUwf_iKvJZ25EUOuHNW57E2CfiwDmdzjiFiYbWLl-1tIdK9l0IYtUWtUgW_08w8EwOUCvnGdxaUs3uKz0rWEkqI-mApTRwjmAcLqb-DNwSPqbSzn3418whgqf0V-fp8ToVk6cVV5i89kyQqOzY6HQyZqjdL0s9IqADwQ-sFMcMaECIYUQIOaxGz2Oaw2_cZ3TyiixePLCgDScF3TUekJSXfM4P2ffXMdLBTTKg6uW8m_BJU6F0dK9nIOORNKDi7cZyX5ES4Nk7OMic9vmZtNasUUg6WuvEAIrKB3bxulAr49Eyx9U4oBWCmAbcXIRmnIpOMmJGlMDV_y_WP9zGwjtjFpK7gzvYl503bPdfGe63fyncFMo99oDW-buB_pUV5RGlZiUYg430oryNAdVtUH0vqQNeK3lKxi_EYVVph7oDgipqIIT-FNm00" alt="Діаграма" /></p>
-</div>
+<p><em>Рисунок 4: Схема можливостей Адміністратора контенту</em></p>
+<h2 id="Сценарії-взаємодії-для-Відвідувача"><a class="header" href="#Сценарії-взаємодії-для-Відвідувача">Сценарії взаємодії для Відвідувача</a></h2>
+<h3 id="Реєстрація-нового-користувача-userregister"><a class="header" href="#Реєстрація-нового-користувача-userregister">Реєстрація нового користувача (UserRegister)</a></h3>
+<ul>
+<li><strong>Ідентифікатор:</strong> UserRegister</li>
+<li><strong>Назва:</strong> Процес реєстрації нового користувача</li>
+<li><strong>Актори:</strong> Відвідувач, Система</li>
+<li><strong>Передумови:</strong> Відвідувач системи не має існуючого облікового запису.</li>
+<li><strong>Результат:</strong> Створено новий обліковий запис користувача, готовий до використання.</li>
+</ul>
+<h4 id="Нештатні-ситуації"><a class="header" href="#Нештатні-ситуації">Нештатні ситуації</a></h4>
+<ul>
+<li><strong>InvalidDataException</strong>: Надані дані не відповідають очікуваному формату або правилам.</li>
+<li><strong>DataMissingException</strong>: Не всі обов'язкові поля реєстраційної форми заповнені.</li>
+<li><strong>AlreadyRegisteredException</strong>: Обліковий запис з вказаною електронною поштою вже існує.</li>
+</ul>
+<h4 id="Основний-потік-подій"><a class="header" href="#Основний-потік-подій">Основний потік подій</a></h4>
+<ol>
+<li>Відвідувач ініціює процес реєстрації (наприклад, натискає кнопку 'Реєстрація').</li>
+<li>Відвідувач заповнює реєстраційну форму (вводить ім'я, прізвище, email, пароль).</li>
+<li>Система приймає дані для реєстрації.</li>
+<li>Система валідує отриману інформацію.</li>
+<li>Система перевіряє, чи не існує вже акаунт з таким email.</li>
+<li>Система створює новий запис про користувача в базі даних.</li>
+<li>Система сповіщає користувача про успішне завершення реєстрації.</li>
+</ol>
+<p><em>Діаграма послідовності для UserRegister:</em>
+<img src="//www.plantuml.com/plantuml/png/dLHDRzD04BtxLwp4WQJg0IHEyO4MA187EC2Lon9lmggE7TdRGY58AO424Y9I5QKdg2h-W8bYsdoa-Gkp_uWtQqj1wiUX6oNopiwyUU_jn1kfaOdPQOLUkgsZjanaIxoIzUrc4kz4mSCuZ1Dngw7uyr-6h1kzgysUUEy9h0SN2jmgpk8aK4aPl-EMYsycIVoc3DzpouKVnv5veTyfSNUrVoPR2lbQXju7p-lGeHtIc4RyQtiqein-wNXEXrUZ0rhOeJt0zuST2Dkbt0xills8fwm8-yWweeoMT8xYHP7tYSwHCRUzbr45mFFRjhykQ6cxs9mYxSn-etnTg9RK8Hy0h8lwcVrUzPdJ2JBGXNAQKzP1Xr-kvHb30Xyd6LVbJ8Yf0xYFE7HaJ1WOkY4gD2YsWgRWmwbJL29mlohCQnM92WFHj0flQdI8nncxK2hhCs5cDK4efmLblgV2L04N44NDCOjc6Wp41DY5ENZEQChYrvv4kpBKmIDfvDRRkceR7KThFcfJ4xSz5GMwKNBz3S730c36lKzNdb9-9MbKqH9alzBYWYKqHGW8VnW5Dm18-E3S_rmsWjpH3LIndASwJNNKl5xL5b-mi3t6PZfymxG0qkHIDSVExx5h_vTLewv_sTGTtO3qPfWe6UmzLqsT6fMeu6hgDJe1oeY7XkUvC97DAlsZINa_FAO-qdzYCxRxtAripeF46Co8nYir_ZL_EH3O00D-VVm3" alt="Діаграма" /></p>
+<h3 id="Аутентифікація-користувача-userlogin"><a class="header" href="#Аутентифікація-користувача-userlogin">Аутентифікація користувача (UserLogin)</a></h3>
+<ul>
+<li><strong>Ідентифікатор:</strong> UserLogin</li>
+<li><strong>Назва:</strong> Вхід користувача до системи</li>
+<li><strong>Актори:</strong> Відвідувач (що має акаунт), Система</li>
+<li><strong>Передумови:</strong> Користувач вже має зареєстрований обліковий запис.</li>
+<li><strong>Результат:</strong> Користувач успішно аутентифікований та отримує доступ до функцій системи для зареєстрованих користувачів.</li>
+</ul>
+<h4 id="Нештатні-ситуації-1"><a class="header" href="#Нештатні-ситуації-1">Нештатні ситуації</a></h4>
+<ul>
+<li><strong>TooManyActionsException</strong>: Вичерпано ліміт невдалих спроб входу.</li>
+<li><strong>DataNotFoundException</strong>: Надано невірний пароль або email.</li>
+<li><strong>NotRegisteredException</strong>: Обліковий запис з таким email не знайдено.</li>
+</ul>
+<h4 id="Основний-потік-подій-1"><a class="header" href="#Основний-потік-подій-1">Основний потік подій</a></h4>
+<ol>
+<li>Користувач відкриває форму автентифікації.</li>
+<li>Користувач вводить свої облікові дані (email та пароль).</li>
+<li>Система приймає запит на вхід.</li>
+<li>Система верифікує надані облікові дані.</li>
+<li>Система перевіряє існування акаунту з вказаним email.</li>
+<li>Система авторизує користувача, надаючи доступ до захищених ресурсів.</li>
+<li>Система інформує користувача про успішний вхід.</li>
+</ol>
+<p><em>Діаграма послідовності для UserLogin:</em>
+<img src="//www.plantuml.com/plantuml/png/dLDDQnD16BxFhtZ1IzkJWgVcOEj7R_QW7hsCoQGktUo4tQbQZT3kLaG8HAJiGL3n7wnXOoNDnrzuvn_vl9D8X1gGJYwPTvwFvs5cTpAdKtVKYLLs62LTdUeEFTFDmuFK7YMjUpQsATre6_dzXT1D5xs8t36zKOHrzmeXhCMPJLicNSvlXXNcksbgNox7jyCAupsRkCVHQqEtLljztJ70HpfMRvNgyMUU-HF-vKzzxWiUSkNVzrJeeRRvao-vvh40mj4v-RE0d_Y2UEZVyOnhNpG42W0sKCfzdqn7Hp7vd2lYEOWdEBlq_OOuVb-uyOWdNFL0_GeA74GK3dp15JZG8Pw2BpOI0zoeJHlyZKT0ZtW8o0SU0JCZQ9UWb-3uKvu7knztDiazDmbjI0mURogYRR1dO491Xk8sns02yqlKB9ucMq-iVQYJurrSYaso1w-QfYl_jXgWPyvsbKbQKLk5nf11Y3DuZqDqSGrHnkBYI-8QpbDV_ib-ljYI0AG4UBaCraGDHKK8SGUYFqNc0VA34YwiJmB7iC0ebuimSMPW1C1_zhsldTwtRayUtFgs8Vt7bHL90Fn1wtzb1tI8RNXPV24eLBxwqBXg1FGN46le8TKof5mu149ohlcdt3Fi1gj7TvskwFd874IPCwbPNtRzHm783Z3oWVy6" alt="Діаграма" /></p>
+<h2 id="Сценарії-взаємодії-для-Адміністратора-контенту"><a class="header" href="#Сценарії-взаємодії-для-Адміністратора-контенту">Сценарії взаємодії для Адміністратора контенту</a></h2>
+<h3 id="Призначення-іншої-ролі-користувачеві-userrolepromote"><a class="header" href="#Призначення-іншої-ролі-користувачеві-userrolepromote">Призначення іншої ролі користувачеві (UserRolePromote)</a></h3>
+<ul>
+<li><strong>Ідентифікатор:</strong> UserRolePromote</li>
+<li><strong>Назва:</strong> Зміна ролі існуючого користувача</li>
+<li><strong>Актори:</strong> Адміністратор контенту, Система (можливо, сповіщення для Користувача)</li>
+<li><strong>Передумови:</strong>
+<ul>
+<li>Адміністратор контенту аутентифікований та має відповідні права.</li>
+<li>Цільовий користувач має активний обліковий запис.</li>
+</ul>
+</li>
+<li><strong>Результат:</strong> Роль цільового користувача успішно змінена.</li>
+</ul>
+<h4 id="Нештатні-ситуації-2"><a class="header" href="#Нештатні-ситуації-2">Нештатні ситуації:</a></h4>
+<ul>
+<li><strong>RoleNotEnoughRightsException</strong>: Поточний користувач не має прав адміністратора.</li>
+<li><strong>NotRegisteredException</strong>: Цільовий користувач не знайдений в системі.</li>
+<li><strong>RoleAlreadyHighestException</strong>: Спроба призначити роль, яку користувач вже має, або найвищу можливу роль.</li>
+</ul>
+<h4 id="Основний-потік-подій-2"><a class="header" href="#Основний-потік-подій-2">Основний потік подій</a></h4>
+<ol>
+<li>Адміністратор контенту вибирає цільового користувача в інтерфейсі управління.</li>
+<li>Адміністратор контенту обирає нову роль для цього користувача.</li>
+<li>Система отримує команду на зміну ролі.</li>
+<li>Система перевіряє повноваження адміністратора.</li>
+<li>Система перевіряє існування цільового користувача.</li>
+<li>Система перевіряє, чи можлива зміна на обрану роль.</li>
+<li>Система оновлює роль користувача в базі даних.</li>
+<li>Система повідомляє адміністратора (та, можливо, користувача) про успішну зміну ролі.</li>
+</ol>
+<p><em>Діаграма послідовності для UserRolePromote:</em>
+<img src="//www.plantuml.com/plantuml/png/dLHDRn916BxlhvZ4YxrfuaaEjfeQJptWrSiA0qmAEsHsKAkOy97eXLXZcZqOhV4V84Ax5bZ_mZl_oEST5hk9QvDs26pcdUTzFcQ6tOrjQ6olqmxYGnLrGnDsnFEmTjWqkXVL7-csDk9MG_AdW0XhLhrGzaYy2GJ6mtyQ_DYiQLEN9g_VySFNzupHB_FoFJzy-R6Ex5FrMegxb_E3i2E1Ls4xU1i4VVf8SrgvXDOkSKCtSWEQkX5bRY3eWZ9QOxBWNpVk1pvUS9y-KKe_AFNO4yO1ZkcGKJH3yJrD1NYNxbZG-OQUKW5GXbfI0SLfaM2D-ioDju19XOrzzuoilg9fdrkyknHquroLLz0yHoiUqxzQc1Urlj42qmKa4ZTmnzpycnKtkg0uuuXeWzjf-NRm4wvKGzoc4qonn0k0JIW37Q_JxC6Ei2qP0OFs7MmvQxC4zBbXgxn2YYLTkF6pgAhRya3R_KZtcgsgQhPilF-g9hjMwQW2XjZgRY2Zkce4fKdO9WVc77a6zyubl8kiZEzFoagFw3BGv_BpE-SzfLyqzxkJtI0SWbLbKyLM6bc_LYomP7G6djGNsTcaz2hb4RumdFqMG32Ltl14zjf6XlMZ9pWF6Tihd9_cTsZfFe1gUt__jzze-Cetp0rPBbTt2GgZZIMQ5-zYQTph_cFXTXTs-QNq1m00" alt="Діаграма" /></p>
+<h3 id="Усунення-користувача-userdelete"><a class="header" href="#Усунення-користувача-userdelete">Усунення користувача (UserDelete)</a></h3>
+<ul>
+<li><strong>Ідентифікатор:</strong> UserDelete</li>
+<li><strong>Назва:</strong> Видалення облікового запису користувача</li>
+<li><strong>Актори:</strong> Адміністратор контенту, Система (можливо, сповіщення для Користувача)</li>
+<li><strong>Передумови:</strong> Адміністратор контенту аутентифікований та має права на видалення користувачів. Цільовий користувач існує.</li>
+<li><strong>Результат:</strong> Обліковий запис цільового користувача видалено (або деактивовано) з системи.</li>
+</ul>
+<h4 id="Нештатні-ситуації-3"><a class="header" href="#Нештатні-ситуації-3">Нештатні ситуації:</a></h4>
+<ul>
+<li><strong>PermissionDeniedException</strong>: Поточний користувач не має прав на видалення.</li>
+<li><strong>NotRegisteredException</strong>: Цільовий користувач не знайдений в системі.</li>
+</ul>
+<h4 id="Основний-потік-подій-3"><a class="header" href="#Основний-потік-подій-3">Основний потік подій</a></h4>
+<ol>
+<li>Адміністратор контенту вибирає користувача для видалення.</li>
+<li>Система отримує команду на видалення користувача.</li>
+<li>Система перевіряє повноваження адміністратора.</li>
+<li>Система перевіряє існування цільового користувача.</li>
+<li>Система видаляє (або позначає як видалений) обліковий запис користувача.</li>
+<li>Система сповіщає адміністратора (та, можливо, користувача) про успішне видалення.</li>
+</ol>
+<p><em>Діаграма послідовності для UserDelete:</em>
+<img src="//www.plantuml.com/plantuml/png/hLHFQnD15B_FftZKIt8G0WM57gIDQKz5Ylq4w-viN9BinjaDMaH84z0AGYH8JgBquZcDIPicRV8LtdmZVw-Rib4NxQ4BsTsPURy_xpUpsOuJnoIjHbt5jI1iEiPfq0l7hLLDr0gzfr4zClHWhxBtQ7TphIBMhrewT3MzLOHhnvZeTLfRqRfvM3igrriwNNAJo9GZuscJ5fJhO9SbsWzylH-4-Z-hVvhH9V-nxqWD7S1wu0PD9qpoITOA_iNpB4h-rl5zVzFrilLCGDPSjrHIxvHof3_QuCyyvYixu6ixiCUsOziyj1rUs3RnZ1UOxl14xhQxGKvCEruZ25KpimUAKvu2AdLNF9GgEZoA4zrGwgQQ7Zv9ORH5tESfdw5UPBw819G4BW8ymkG77X8ipMsFC9xYTSXpiG0JlJN6L48elm4B3dJHNL6A3m36jaju3FE8KlZlHDzv0g89Zn15s_Q4R0co4I2u0tv-2oSCycF3KuL8dKnGVPb8u0uknLz1SGxzgH315QHE012GEBJ7F9K8CF4UZBqjnNsmGqEaLxuN90sDePB6jRG3AWYLz7lZLkHvL5I50sqQGHm7KLZHOQ2ztJUkRYOO5fKEFHA7Tun0-kFhT7DMpOj5RD0diORVJrxaR-Hz9V4ZamFgCbUCX8ZuGZZuaiSIc1Ih0hw1vxeQe4DpznpwjmT6Cg02tiwaIz3YTGQhS2_7hKYymD8S3cUPlmiKBSLVnfrz0QVfeK9l7xDTawr5vqlCdaWdUKTs6uxnV_SB" alt="Діаграма" /></p>
+<h2 id="Сценарії-взаємодії-для-Зареєстрованого-користувача"><a class="header" href="#Сценарії-взаємодії-для-Зареєстрованого-користувача">Сценарії взаємодії для Зареєстрованого користувача</a></h2>
+<h3 id="Додавання-медіа-контенту-contentcreate"><a class="header" href="#Додавання-медіа-контенту-contentcreate">Додавання медіа-контенту (ContentCreate)</a></h3>
+<ul>
+<li><strong>Ідентифікатор:</strong> ContentCreate</li>
+<li><strong>Назва:</strong> Створення нового об'єкта медіа-контенту</li>
+<li><strong>Актори:</strong> Зареєстрований користувач, Система</li>
+<li><strong>Передумови:</strong> Користувач аутентифікований і володіє необхідними дозволами для створення контенту.</li>
+<li><strong>Результат:</strong> Новий медіа-об'єкт успішно додано до сховища системи.</li>
+</ul>
+<h4 id="Нештатні-ситуації-4"><a class="header" href="#Нештатні-ситуації-4">Нештатні ситуації</a></h4>
+<ul>
+<li><strong>PermissionDeniedException</strong>: Користувач не має дозволу на створення контенту.</li>
+<li><strong>ContentIdExistsException</strong>: Спроба створити контент з ідентифікатором, що вже використовується.</li>
+<li><strong>InvalidContentDataException</strong>: Надані дані контенту не пройшли перевірку (невірний формат, відсутні обов'язкові поля).</li>
+</ul>
+<h4 id="Основний-потік-подій-4"><a class="header" href="#Основний-потік-подій-4">Основний потік подій</a></h4>
+<ol>
+<li>Користувач активує функцію створення контенту.</li>
+<li>Система відображає форму для введення даних нового контенту.</li>
+<li>Користувач заповнює форму та/або завантажує файли.</li>
+<li>Система перевіряє права користувача на додавання контенту.</li>
+<li>Система перевіряє унікальність ідентифікатора контенту (якщо застосовно).</li>
+<li>Система валідує надані дані та файли.</li>
+<li>Система зберігає новий медіа-об'єкт.</li>
+<li>Система інформує користувача про успішне створення.</li>
+</ol>
+<p><em>Діаграма послідовності для ContentCreate:</em>
+<img src="//www.plantuml.com/plantuml/png/hLNVJXDF5BwVfvZmk-5tOTGBbN1X46eC2I4an0SOjrESqExMsG4XneG_1haWO0Y1n6YCRx1KYwNGyWfdtiXlpiAos6guO3TDftE-yttdctDsEv4wPTrIeoxIHHCtbLKD-Kf5YmisMOghKqaziVA_sgDmbn2fVhEauqZBTqBYUcPjyZR7LfHTdAyhfrzOjPe78vVOoSHMjSqXisevZyoOcfuniIu7AwPHP1RnF-lHZsjFQZN6pA5w4vccYbsPPhAEd070W2--63QRE3qiFgOV5l6o069HDFQ0OvF9oc2g2dSHBcNEc_gojkAz42gSZ1oX8yhy6hNzWL_t6rZrgKKPzQX3fvAwrCTMXqER8U0_ZaYLofSfI9hNvi3pFOTHcyufOz3yQkfqGuW0blUUSf8Sb_I9ki1rgEKt_O7q7y3SmzQMF_IxaZbQBDl6Ti_lSHLO1EfUgACWp0K29KpG1GhO01tddbDd29N8Csxcxlj3-Wc5O-0oEe77WuB5Rqh4pb348DbVoy098hvxa-Q-f5-8yjc22KANxh4yfJFg3Atj6xLPi8MpMVDxIA0BR33FqEvG9c8CYxHcuRKBSw9m2Vg2eaw2IfxO0-rsg0AV7cKmHntcoBWBU-E2la8LfyAs6UPtg5-e_-DKHkUqRPWqDKbSqR7HrUShaMuw_FnVwBWgGtctz1e60ytfGl4CybYprHqvNRaZbv_BauKEIMvD5mpd497K0bzR1bq0q2ynEfN4JiTk6hPCwjBRcjjd3nWqxdee1oUO1KloQd67ZSi70z-0bIK67wNHwNXPrKtrqbP5ENLRIqTq73e6KpyWpwOm-VpUk2bpdLsy0hQmNpmRLrFTbrYlOtdejuFJOTCrWPBmV_4R" alt="Діаграма" /></p>
+<h3 id="Пошук-медіа-контенту-contentsearch"><a class="header" href="#Пошук-медіа-контенту-contentsearch">Пошук медіа-контенту (ContentSearch)</a></h3>
+<ul>
+<li><strong>Ідентифікатор:</strong> ContentSearch</li>
+<li><strong>Назва:</strong> Пошук існуючого медіа-контенту</li>
+<li><strong>Актори:</strong> Зареєстрований користувач, Система</li>
+<li><strong>Передумови:</strong> Користувач аутентифікований в системі.</li>
+<li><strong>Результат:</strong> Система надає користувачеві список медіа-об'єктів, що відповідають критеріям пошуку.</li>
+</ul>
+<h4 id="Нештатні-ситуації-5"><a class="header" href="#Нештатні-ситуації-5">Нештатні ситуації:</a></h4>
+<ul>
+<li><strong>InvalidContentIdException</strong>: Пошук за ідентифікатором, якого не існує в системі.</li>
+<li><strong>InvalidSearchRequestException</strong>: Введені некоректні або несумісні параметри для пошуку/фільтрації.</li>
+</ul>
+<h4 id="Основний-потік-подій-5"><a class="header" href="#Основний-потік-подій-5">Основний потік подій:</a></h4>
+<ol>
+<li>Користувач ініціює дію пошуку контенту.</li>
+<li>Система надає інтерфейс для введення пошукових критеріїв та фільтрів.</li>
+<li>Користувач вводить пошуковий запит та/або застосовує фільтри.</li>
+<li>Система перевіряє валідність введених критеріїв.</li>
+<li>Система виконує пошук у сховищі контенту за заданими параметрами.</li>
+<li>Система формує список знайдених результатів.</li>
+<li>Система відображає результати пошуку користувачеві.</li>
+</ol>
+<p><em>Діаграма послідовності для ContentSearch:</em>
+<img src="//www.plantuml.com/plantuml/png/hLFB3j905DtFLqpY1bRkwOP4NR3LBsYW20cs28DnmO82GHT44q9AOdHXuWTKqafvjFp2lN_akHrZ8CY6ID8mcJcFSswdzQ5n1sRqfgVKc3OKyuHINdF8KwmAsb9CEMMqrtIW0bjPUJIJ0_umLYLRrJGjAEU85tW-yLfJ8WjDPt0-0dtWcIC6tosVKZfHF1RUDnWa58F34IHmn1EU0x3dy8R_G41OhB0kO99XVmcOWAmHGcxqKqqxOC42FnH9dacSEG8TUGaIy7VIh-1-12uHoaLSKR6X88rj-3dA3uod1ztN7QEVjDikVeg-0lcBZi0YhqQJ509JYl7as42UJDfWGqRxkQOmiDGsbN-1SIJ6CfSOkLARzsfqgjBmtxczRkkLvmwQdPVUsv4tD2_UDxs-wGP-LNb-IqiwMoaJVUXULz9_TgL-Bfd-Io5TeVDDtd9gkl6yYhfVBarne4MC3j0_0L4Q21pQjAT4O5JyxViiy8tdcqRhJjSVvHnFzds7yfxa0g1hETqTqk02sFGSqTOfvuDL0j1F6JYgojMzXLFsp_i8s9OZvz5lBUWhLKS1-Ln_0m00" alt="Діаграма" /></p>
+<h3 id="Зміна-інформації-про-медіа-контент-contentupdate"><a class="header" href="#Зміна-інформації-про-медіа-контент-contentupdate">Зміна інформації про медіа-контент (ContentUpdate)</a></h3>
+<ul>
+<li><strong>Ідентифікатор:</strong> ContentUpdate</li>
+<li><strong>Назва:</strong> Редагування метаданих існуючого медіа-контенту</li>
+<li><strong>Актори:</strong> Зареєстрований користувач, Система</li>
+<li><strong>Передумови:</strong> Користувач аутентифікований та має права на редагування конкретного об'єкта контенту.</li>
+<li><strong>Результат:</strong> Інформація про вказаний медіа-об'єкт оновлена в системі.</li>
+</ul>
+<h4 id="Нештатні-ситуації-6"><a class="header" href="#Нештатні-ситуації-6">Нештатні ситуації:</a></h4>
+<ul>
+<li><strong>InvalidContentIdException</strong>: Спроба редагувати контент за ідентифікатором, якого не існує.</li>
+<li><strong>PermissionDeniedException</strong>: Користувач не має дозволу на редагування цього контенту.</li>
+<li><strong>InvalidContentDataException</strong>: Оновлені дані не пройшли валідацію.</li>
+</ul>
+<h4 id="Основний-потік-подій-6"><a class="header" href="#Основний-потік-подій-6">Основний потік подій:</a></h4>
+<ol>
+<li>Користувач обирає функцію редагування для певного медіа-об'єкта.</li>
+<li>Система надає форму з поточними даними контенту для редагування.</li>
+<li>Користувач вносить зміни в поля форми.</li>
+<li>Система перевіряє існування контенту, що редагується.</li>
+<li>Система перевіряє права користувача на редагування цього контенту.</li>
+<li>Система валідує змінені дані.</li>
+<li>Система оновлює інформацію про медіа-об'єкт у сховищі.</li>
+<li>Система повідомляє користувача про успішне оновлення.</li>
+</ol>
+<p><em>Діаграма послідовності для ContentUpdate:</em>
+<img src="//www.plantuml.com/plantuml/png/hPJ1gjD058RtynG3RgwlSE_cWdNHdQyGRAu6xaqkxIWkkcXIq2vA0wL446tn3MAjsZQPz1NEUIF_Cp5IIeCWxIR3pFd_-VuvCxqT6AzltZpSApMaZvJpY7xmWcDECAfeJJbPsj9EqvugJ6tTqbWM-CDGERMwrhIaRrWRONQXeJlmUyvufiMEDZ3v3arjPZbrPXWaMBHYToCMSzeUcxWIsZkWf8OuqVrHMO35q2KyrVIBIiwaMjDQkvqjPpSIxclD3cb9-L2aApWBtnge8qwnAGOnsN-WXf7nTJzuzThe9tTt7dwAFgFe9nM0X5AJXVC4cjoHvxhcWs_kpYMzLlJfs1RSMiff3uTITplE0hEYfXroe8mgTTKDtthtGUzP51e_DDtUytSl_KSJHE5JvOSzBMZdaz51phMXoriQSwbmNvmvsjAKyPIgXi7rfU2qXK5TlV3x3y5WW5GTFmpyjf1pA0eqUyFZ-j9PTs4BTwJPKVClbwb-0_YwJ5dxfgUTwdZ6QucnR2nuXXYDmVadif9AYOnl2SNVpbOQXn1ZcF54mfoGkTx-xmkF7fMw1R7yIVm6" alt="Діаграма" /></p>
+<h3 id="Видалення-медіа-контенту-contentdelete"><a class="header" href="#Видалення-медіа-контенту-contentdelete">Видалення медіа-контенту (ContentDelete)</a></h3>
+<ul>
+<li><strong>Ідентифікатор:</strong> ContentDelete</li>
+<li><strong>Назва:</strong> Усунення існуючого медіа-контенту</li>
+<li><strong>Актори:</strong> Зареєстрований користувач, Система</li>
+<li><strong>Передумови:</strong> Користувач аутентифікований та має права на видалення конкретного об'єкта контенту.</li>
+<li><strong>Результат:</strong> Вказаний медіа-об'єкт видалено з системи.</li>
+</ul>
+<h4 id="Нештатні-ситуації-7"><a class="header" href="#Нештатні-ситуації-7">Нештатні ситуації:</a></h4>
+<ul>
+<li><strong>InvalidContentIdException</strong>: Спроба видалити контент за ідентифікатором, якого не існує.</li>
+<li><strong>PermissionDeniedException</strong>: Користувач не має дозволу на видалення цього контенту.</li>
+</ul>
+<h4 id="Основний-потік-подій-7"><a class="header" href="#Основний-потік-подій-7">Основний потік подій:</a></h4>
+<ol>
+<li>Користувач обирає функцію видалення для певного медіа-об'єкта.</li>
+<li>Система запитує підтвердження видалення (опціонально).</li>
+<li>Користувач підтверджує видалення.</li>
+<li>Система перевіряє існування контенту, що видаляється.</li>
+<li>Система перевіряє права користувача на видалення цього контенту.</li>
+<li>Система видаляє медіа-об'єкт зі сховища.</li>
+<li>Система повідомляє користувача про успішне видалення.</li>
+</ol>
+<p><em>Діаграма послідовності для ContentDelete:</em>
+<img src="//www.plantuml.com/plantuml/png/hLJ1RjD04BtlLupQ2vn2aw9AgR4gQ95oG-eNEFOcNTLPH_QsK0XIaah00H6fgeA418W_C542RjAulp3xHynkqX2fXWF2kOpVp9jvRtRZlKHviJffXImv5hBjnLuBwfv_t8oZ4nayYS8eXir6O7vihSJpbJWLwWnUCQ3dyHs6VHQvA0vulC3h8HLQz6aaLH5sA5vosDgsxuT7NX0z5x893IzC-79Il1nHzYlyuOD5eV5m2tFVtzcoyC5A3j_PzYi-UyrO1pzYghiuqPUwf_iKvJZ25EUOuHNW57E2CfiwDmdzjiFiYbWLl-1tIdK9l0IYtUWtUgW_08w8EwOUCvnGdxaUs3uKz0rWEkqI-mApTRwjmAcLqb-DNwSPqbSzn3418whgqf0V-fp8ToVk6cVV5i89kyQqOzY6HQyZqjdL0s9IqADwQ-sFMcMaECIYUQIOaxGz2Oaw2_cZ3TyiixePLCgDScF3TUekJSXfM4P2ffXMdLBTTKg6uW8m_BJU6F0dK9nIOORNKDi7cZyX5ES4Nk7OMic9vmZtNasUUg6WuvEAIrKB3bxulAr49Eyx9U4oBWCmAbcXIRmnIpOMmJGlMDV_y_WP9zGwjtjFpK7gzvYl503bPdfGe63fyncFMo99oDW-buB_pUV5RGlZiUYg430oryNAdVtUH0vqQNeK3lKxi_EYVVph7oDgipqIIT-FNm00" alt="Діаграма" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Проєктування-бази-даних"><a class="header" href="#Проєктування-бази-даних">Проєктування бази даних</a></h1>
 <p>В рамках проекту розробляється:</p>
 <ul>
