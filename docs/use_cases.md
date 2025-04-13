@@ -28,9 +28,12 @@
 
 ![Діаграма](//www.plantuml.com/plantuml/png/LP3DIiGm58NtUOhBxESLPC2jAq5NWeIPC1IqXQRTsyQVPQL8r_e6fRPGYkapdFj6tgW1PnF8pNVEbsHd2vqNvVsTqliYosc3bZkC6CBA3WDwVjcGjdITs4G8fKfhzjeQGTynyHjNNFE3OC_SSNEJueDh35XbDi73SqFmMCC8drW9FHQX7Rpat4_rrVdjfJd-AsxvAVW9emIumXmacF25MGIlxC8k5CZ9ev1Br1EMOFuDnEkZZvQBx9YaIlqzXRQ7xLcKdyuYkZFfGJxd6m00)
 
+Рисунок 2: Схема можливостей Відвідувача
 </center>
 
-Рисунок 2: Схема можливостей Відвідувача
+
+
+<center>
 
 </div>
 Схема прецедентів для Зареєстрованого користувача
@@ -38,9 +41,6 @@
 Рисунок 3 показує функціонал, доступний зареєстрованому користувачеві.
 
 <div style="text-align: center; margin: auto;">
-
-
-<center>
 
 ![Діаграма](//www.plantuml.com/plantuml/png/XPHHQzDG5CVVyoakzK5zADXIHMMKQSKFiDatGMxJaxOqIyPDYg88syhGjy4e3dnGmIyGv-fgJViPplr6_kzD5cjafg7jlUVyStxdVtB9TXHB5K_sV2SQZu9zgUIUw4btF53X9EXtGZzKueRtm5mRYab4hen8l744Fe_BUcfuTpmlouMgJogFj-xTR_PQDlv8gV1b7cvwBLms_3GCujtHQnADLh7FL3qVb8sIpuOZTnnG58c6ZUvaV1MG4isxpbl7aMwC-sfynea-uBcUwKDzXDMQppdX5I_uf-0bhn5QsDJK9FIxcf2HsA51Do8qvuy6mxZdJyXn5Bcn30O-eUX7b5df8vwRtxe-p4fWct9Io-UIJmdgBr1_upK4YU1BK3VlnZfz7jpYKxu4ViOf0XVwWpwnqXGYx3Yf6nE0JFK1S0aIYzksrMxdHGTZeY1sIjYPgGIfzGlKIOcifuPxTgKmxV4Ff7BjoemAt--ytkp3UBc9FfT6_wS5HJAcKWEVuVazvhgy1ho2uMFRP86zXeJzUS7Q9QdSOOdrAU_t5y__QpP5AN0jnpg-o4w3FgussTtl_slob1UcHWNugtbqoEUQQjOJyWai7EIhirYlj_zwsCNKIndnK6njqIii-r6xxHG3gvHbzYfbfhCgsJR-yLRv3G00)
 
