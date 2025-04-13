@@ -255,6 +255,26 @@
 <center>
 <p><img src="//www.plantuml.com/plantuml/png/dLHDRn916BxlhvZ4YxrfuaaEjfeQJptWrSiA0qmAEsHsKAkOy97eXLXZcZqOhV4V84Ax5bZ_mZl_oEST5hk9QvDs26pcdUTzFcQ6tOrjQ6olqmxYGnLrGnDsnFEmTjWqkXVL7-csDk9MG_AdW0XhLhrGzaYy2GJ6mtyQ_DYiQLEN9g_VySFNzupHB_FoFJzy-R6Ex5FrMegxb_E3i2E1Ls4xU1i4VVf8SrgvXDOkSKCtSWEQkX5bRY3eWZ9QOxBWNpVk1pvUS9y-KKe_AFNO4yO1ZkcGKJH3yJrD1NYNxbZG-OQUKW5GXbfI0SLfaM2D-ioDju19XOrzzuoilg9fdrkyknHquroLLz0yHoiUqxzQc1Urlj42qmKa4ZTmnzpycnKtkg0uuuXeWzjf-NRm4wvKGzoc4qonn0k0JIW37Q_JxC6Ei2qP0OFs7MmvQxC4zBbXgxn2YYLTkF6pgAhRya3R_KZtcgsgQhPilF-g9hjMwQW2XjZgRY2Zkce4fKdO9WVc77a6zyubl8kiZEzFoagFw3BGv_BpE-SzfLyqzxkJtI0SWbLbKyLM6bc_LYomP7G6djGNsTcaz2hb4RumdFqMG32Ltl14zjf6XlMZ9pWF6Tihd9_cTsZfFe1gUt__jzze-Cetp0rPBbTt2GgZZIMQ5-zYQTph_cFXTXTs-QNq1m00" alt="Діаграма" /></p>
 </center>
+<p>Усунення користувача (UserDelete)</p>
+<p>Ідентифікатор: UserDelete</p>
+<p>Назва: Видалення облікового запису користувача</p>
+<p>Актори: Адміністратор контенту, Система (можливо, сповіщення для Користувача)</p>
+<p>Передумови: Адміністратор контенту аутентифікований та має права на видалення користувачів. Цільовий користувач існує.</p>
+<p>Результат: Обліковий запис цільового користувача видалено (або деактивовано) з системи.</p>
+<p>Нештатні ситуації:</p>
+<p>Поточний користувач не має прав на видалення – PermissionDeniedException</p>
+<p>Цільовий користувач не знайдений в системі – NotRegisteredException</p>
+<p>Основний потік подій</p>
+<p>Адміністратор контенту вибирає користувача для видалення.</p>
+<p>Система отримує команду на видалення користувача.</p>
+<p>Система перевіряє повноваження адміністратора.</p>
+<p>Система перевіряє існування цільового користувача.</p>
+<p>Система видаляє (або позначає як видалений) обліковий запис користувача.</p>
+<p>Система сповіщає адміністратора (та, можливо, користувача) про успішне видалення.</p>
+<div style="text-align: center; margin: auto;">
+<center>
+<p><img src="//www.plantuml.com/plantuml/png/hLHFQnD15B_FftZKIt8G0WM57gIDQKz5Ylq4w-viN9BinjaDMaH84z0AGYH8JgBquZcDIPicRV8LtdmZVw-Rib4NxQ4BsTsPURy_xpUpsOuJnoIjHbt5jI1iEiPfq0l7hLLDr0gzfr4zClHWhxBtQ7TphIBMhrewT3MzLOHhnvZeTLfRqRfvM3igrriwNNAJo9GZuscJ5fJhO9SbsWzylH-4-Z-hVvhH9V-nxqWD7S1wu0PD9qpoITOA_iNpB4h-rl5zVzFrilLCGDPSjrHIxvHof3_QuCyyvYixu6ixiCUsOziyj1rUs3RnZ1UOxl14xhQxGKvCEruZ25KpimUAKvu2AdLNF9GgEZoA4zrGwgQQ7Zv9ORH5tESfdw5UPBw819G4BW8ymkG77X8ipMsFC9xYTSXpiG0JlJN6L48elm4B3dJHNL6A3m36jaju3FE8KlZlHDzv0g89Zn15s_Q4R0co4I2u0tv-2oSCycF3KuL8dKnGVPb8u0uknLz1SGxzgH315QHE012GEBJ7F9K8CF4UZBqjnNsmGqEaLxuN90sDePB6jRG3AWYLz7lZLkHvL5I50sqQGHm7KLZHOQ2ztJUkRYOO5fKEFHA7Tun0-kFhT7DMpOj5RD0diORVJrxaR-Hz9V4ZamFgCbUCX8ZuGZZuaiSIc1Ih0hw1vxeQe4DpznpwjmT6Cg02tiwaIz3YTGQhS2_7hKYymD8S3cUPlmiKBSLVnfrz0QVfeK9l7xDTawr5vqlCdaWdUKTs6uxnV_SB" alt="Діаграма" /></p>
+</center>
 </div>
 
                     </main>
