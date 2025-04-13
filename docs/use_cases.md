@@ -130,5 +130,51 @@
 ![Діаграма](//www.plantuml.com/plantuml/png/dLDDQnD16BxFhtZ1IzkJWgVcOEj7R_QW7hsCoQGktUo4tQbQZT3kLaG8HAJiGL3n7wnXOoNDnrzuvn_vl9D8X1gGJYwPTvwFvs5cTpAdKtVKYLLs62LTdUeEFTFDmuFK7YMjUpQsATre6_dzXT1D5xs8t36zKOHrzmeXhCMPJLicNSvlXXNcksbgNox7jyCAupsRkCVHQqEtLljztJ70HpfMRvNgyMUU-HF-vKzzxWiUSkNVzrJeeRRvao-vvh40mj4v-RE0d_Y2UEZVyOnhNpG42W0sKCfzdqn7Hp7vd2lYEOWdEBlq_OOuVb-uyOWdNFL0_GeA74GK3dp15JZG8Pw2BpOI0zoeJHlyZKT0ZtW8o0SU0JCZQ9UWb-3uKvu7knztDiazDmbjI0mURogYRR1dO491Xk8sns02yqlKB9ucMq-iVQYJurrSYaso1w-QfYl_jXgWPyvsbKbQKLk5nf11Y3DuZqDqSGrHnkBYI-8QpbDV_ib-ljYI0AG4UBaCraGDHKK8SGUYFqNc0VA34YwiJmB7iC0ebuimSMPW1C1_zhsldTwtRayUtFgs8Vt7bHL90Fn1wtzb1tI8RNXPV24eLBxwqBXg1FGN46le8TKof5mu149ohlcdt3Fi1gj7TvskwFd874IPCwbPNtRzHm783Z3oWVy6)
 
 </center>
+Сценарії взаємодії для Адміністратора контенту
+Призначення іншої ролі користувачеві (UserRolePromote)
 
+Ідентифікатор: UserRolePromote
+
+Назва: Зміна ролі існуючого користувача
+
+Актори: Адміністратор контенту, Система (можливо, сповіщення для Користувача)
+
+Передумови:
+
+Адміністратор контенту аутентифікований та має відповідні права.
+
+Цільовий користувач має активний обліковий запис.
+
+Результат: Роль цільового користувача успішно змінена.
+
+Нештатні ситуації:
+
+Поточний користувач не має прав адміністратора – RoleNotEnoughRightsException
+
+Цільовий користувач не знайдений в системі – NotRegisteredException
+
+Спроба призначити роль, яку користувач вже має, або найвищу можливу роль – RoleAlreadyHighestException
+
+Основний потік подій
+
+Адміністратор контенту вибирає цільового користувача в інтерфейсі управління.
+
+Адміністратор контенту обирає нову роль для цього користувача.
+
+Система отримує команду на зміну ролі.
+
+Система перевіряє повноваження адміністратора.
+
+Система перевіряє існування цільового користувача.
+
+Система перевіряє, чи можлива зміна на обрану роль.
+
+Система оновлює роль користувача в базі даних.
+
+Система повідомляє адміністратора (та, можливо, користувача) про успішну зміну ролі.
+<center>
+
+![Діаграма](//www.plantuml.com/plantuml/png/dLHDRn916BxlhvZ4YxrfuaaEjfeQJptWrSiA0qmAEsHsKAkOy97eXLXZcZqOhV4V84Ax5bZ_mZl_oEST5hk9QvDs26pcdUTzFcQ6tOrjQ6olqmxYGnLrGnDsnFEmTjWqkXVL7-csDk9MG_AdW0XhLhrGzaYy2GJ6mtyQ_DYiQLEN9g_VySFNzupHB_FoFJzy-R6Ex5FrMegxb_E3i2E1Ls4xU1i4VVf8SrgvXDOkSKCtSWEQkX5bRY3eWZ9QOxBWNpVk1pvUS9y-KKe_AFNO4yO1ZkcGKJH3yJrD1NYNxbZG-OQUKW5GXbfI0SLfaM2D-ioDju19XOrzzuoilg9fdrkyknHquroLLz0yHoiUqxzQc1Urlj42qmKa4ZTmnzpycnKtkg0uuuXeWzjf-NRm4wvKGzoc4qonn0k0JIW37Q_JxC6Ei2qP0OFs7MmvQxC4zBbXgxn2YYLTkF6pgAhRya3R_KZtcgsgQhPilF-g9hjMwQW2XjZgRY2Zkce4fKdO9WVc77a6zyubl8kiZEzFoagFw3BGv_BpE-SzfLyqzxkJtI0SWbLbKyLM6bc_LYomP7G6djGNsTcaz2hb4RumdFqMG32Ltl14zjf6XlMZ9pWF6Tihd9_cTsZfFe1gUt__jzze-Cetp0rPBbTt2GgZZIMQ5-zYQTph_cFXTXTs-QNq1m00)
+
+</center>
 </div>
