@@ -40,7 +40,7 @@
 
 
 
-<div style="text-align: center; margin: auto;">
+
 
 ![Діаграма](//www.plantuml.com/plantuml/png/XPHHQzDG5CVVyoakzK5zADXIHMMKQSKFiDatGMxJaxOqIyPDYg88syhGjy4e3dnGmIyGv-fgJViPplr6_kzD5cjafg7jlUVyStxdVtB9TXHB5K_sV2SQZu9zgUIUw4btF53X9EXtGZzKueRtm5mRYab4hen8l744Fe_BUcfuTpmlouMgJogFj-xTR_PQDlv8gV1b7cvwBLms_3GCujtHQnADLh7FL3qVb8sIpuOZTnnG58c6ZUvaV1MG4isxpbl7aMwC-sfynea-uBcUwKDzXDMQppdX5I_uf-0bhn5QsDJK9FIxcf2HsA51Do8qvuy6mxZdJyXn5Bcn30O-eUX7b5df8vwRtxe-p4fWct9Io-UIJmdgBr1_upK4YU1BK3VlnZfz7jpYKxu4ViOf0XVwWpwnqXGYx3Yf6nE0JFK1S0aIYzksrMxdHGTZeY1sIjYPgGIfzGlKIOcifuPxTgKmxV4Ff7BjoemAt--ytkp3UBc9FfT6_wS5HJAcKWEVuVazvhgy1ho2uMFRP86zXeJzUS7Q9QdSOOdrAU_t5y__QpP5AN0jnpg-o4w3FgussTtl_slob1UcHWNugtbqoEUQQjOJyWai7EIhirYlj_zwsCNKIndnK6njqIii-r6xxHG3gvHbzYfbfhCgsJR-yLRv3G00)
 
@@ -216,5 +216,52 @@
 ![Діаграма](//www.plantuml.com/plantuml/png/hLHFQnD15B_FftZKIt8G0WM57gIDQKz5Ylq4w-viN9BinjaDMaH84z0AGYH8JgBquZcDIPicRV8LtdmZVw-Rib4NxQ4BsTsPURy_xpUpsOuJnoIjHbt5jI1iEiPfq0l7hLLDr0gzfr4zClHWhxBtQ7TphIBMhrewT3MzLOHhnvZeTLfRqRfvM3igrriwNNAJo9GZuscJ5fJhO9SbsWzylH-4-Z-hVvhH9V-nxqWD7S1wu0PD9qpoITOA_iNpB4h-rl5zVzFrilLCGDPSjrHIxvHof3_QuCyyvYixu6ixiCUsOziyj1rUs3RnZ1UOxl14xhQxGKvCEruZ25KpimUAKvu2AdLNF9GgEZoA4zrGwgQQ7Zv9ORH5tESfdw5UPBw819G4BW8ymkG77X8ipMsFC9xYTSXpiG0JlJN6L48elm4B3dJHNL6A3m36jaju3FE8KlZlHDzv0g89Zn15s_Q4R0co4I2u0tv-2oSCycF3KuL8dKnGVPb8u0uknLz1SGxzgH315QHE012GEBJ7F9K8CF4UZBqjnNsmGqEaLxuN90sDePB6jRG3AWYLz7lZLkHvL5I50sqQGHm7KLZHOQ2ztJUkRYOO5fKEFHA7Tun0-kFhT7DMpOj5RD0diORVJrxaR-Hz9V4ZamFgCbUCX8ZuGZZuaiSIc1Ih0hw1vxeQe4DpznpwjmT6Cg02tiwaIz3YTGQhS2_7hKYymD8S3cUPlmiKBSLVnfrz0QVfeK9l7xDTawr5vqlCdaWdUKTs6uxnV_SB)
 
 </center>
+Сценарії взаємодії для Зареєстрованого користувача
+Додавання медіа-контенту (ContentCreate)
+
+Ідентифікатор: ContentCreate
+
+Назва: Створення нового об'єкта медіа-контенту
+
+Актори: Зареєстрований користувач, Система
+
+Передумови: Користувач аутентифікований і володіє необхідними дозволами для створення контенту.
+
+Результат: Новий медіа-об'єкт успішно додано до сховища системи.
+
+Нештатні ситуації
+
+Користувач не має дозволу на створення контенту – PermissionDeniedException
+
+Спроба створити контент з ідентифікатором, що вже використовується – ContentIdExistsException
+
+Надані дані контенту не пройшли перевірку (невірний формат, відсутні обов'язкові поля) – InvalidContentDataException
+
+Основний потік подій
+
+Користувач активує функцію створення контенту.
+
+Система відображає форму для введення даних нового контенту.
+
+Користувач заповнює форму та/або завантажує файли.
+
+Система перевіряє права користувача на додавання контенту.
+
+Система перевіряє унікальність ідентифікатора контенту (якщо застосовно).
+
+Система валідує надані дані та файли.
+
+Система зберігає новий медіа-об'єкт.
+
+Система інформує користувача про успішне створення.
+
+<div style="text-align: center; margin: auto;">
+<center>
+
+![Діаграма](//www.plantuml.com/plantuml/png/hLNVJXDF5BwVfvZmk-5tOTGBbN1X46eC2I4an0SOjrESqExMsG4XneG_1haWO0Y1n6YCRx1KYwNGyWfdtiXlpiAos6guO3TDftE-yttdctDsEv4wPTrIeoxIHHCtbLKD-Kf5YmisMOghKqaziVA_sgDmbn2fVhEauqZBTqBYUcPjyZR7LfHTdAyhfrzOjPe78vVOoSHMjSqXisevZyoOcfuniIu7AwPHP1RnF-lHZsjFQZN6pA5w4vccYbsPPhAEd070W2--63QRE3qiFgOV5l6o069HDFQ0OvF9oc2g2dSHBcNEc_gojkAz42gSZ1oX8yhy6hNzWL_t6rZrgKKPzQX3fvAwrCTMXqER8U0_ZaYLofSfI9hNvi3pFOTHcyufOz3yQkfqGuW0blUUSf8Sb_I9ki1rgEKt_O7q7y3SmzQMF_IxaZbQBDl6Ti_lSHLO1EfUgACWp0K29KpG1GhO01tddbDd29N8Csxcxlj3-Wc5O-0oEe77WuB5Rqh4pb348DbVoy098hvxa-Q-f5-8yjc22KANxh4yfJFg3Atj6xLPi8MpMVDxIA0BR33FqEvG9c8CYxHcuRKBSw9m2Vg2eaw2IfxO0-rsg0AV7cKmHntcoBWBU-E2la8LfyAs6UPtg5-e_-DKHkUqRPWqDKbSqR7HrUShaMuw_FnVwBWgGtctz1e60ytfGl4CybYprHqvNRaZbv_BauKEIMvD5mpd497K0bzR1bq0q2ynEfN4JiTk6hPCwjBRcjjd3nWqxdee1oUO1KloQd67ZSi70z-0bIK67wNHwNXPrKtrqbP5ENLRIqTq73e6KpyWpwOm-VpUk2bpdLsy0hQmNpmRLrFTbrYlOtdejuFJOTCrWPBmV_4R
+
+</center>
+
 
 </div>
+
