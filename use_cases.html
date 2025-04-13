@@ -164,22 +164,6 @@
 <p>Специфікація прецедентів використання
 Загальна схема прецедентів</p>
 <p>Рисунок 1 ілюструє загальну схему прецедентів та визначає ключові взаємодії.</p>
-<div style="text-align: center; margin: auto;">
-<p>@startuml</p>
-<p>actor "Відвідувач" as Visitor
-actor "Зареєстрований користувач" as RegUser #lightblue
-actor "Адміністратор контенту" as Admin #lightyellow</p>
-<p>usecase "Реєстрація\nСтворення нового акаунту" as UC_Reg
-usecase "Вхід до системи\nАутентифікація користувача" as UC_Login</p>
-<p>usecase "Робота з контентом\nВзаємодія з медіа-ресурсами" as UC_Content</p>
-<p>usecase "Адміністрування користувачів\nУправління обліковими записами" as UC_Admin</p>
-<p>Visitor -u-&gt; UC_Reg
-Visitor -u-&gt; UC_Login</p>
-<p>RegUser -u-|&gt; Visitor
-RegUser -d-&gt; UC_Content</p>
-<p>Admin -u-|&gt; Visitor
-Admin -d-&gt; UC_Admin</p>
-<p>@enduml</p>
 <p>Рисунок 1: Загальна схема прецедентів</p>
 </div>
 <p>Відповідно до схеми, система розрізняє 3 ролі акторів:</p>
