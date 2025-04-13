@@ -17,33 +17,6 @@
 
 Рисунок 1 ілюструє загальну схему прецедентів та визначає ключові взаємодії.
 
-<div style="text-align: center; margin: auto;">
-
-
-@startuml
-
-actor "Відвідувач" as Visitor
-actor "Зареєстрований користувач" as RegUser #lightblue
-actor "Адміністратор контенту" as Admin #lightyellow
-
-usecase "Реєстрація\nСтворення нового акаунту" as UC_Reg
-usecase "Вхід до системи\nАутентифікація користувача" as UC_Login
-
-usecase "Робота з контентом\nВзаємодія з медіа-ресурсами" as UC_Content
-
-usecase "Адміністрування користувачів\nУправління обліковими записами" as UC_Admin
-
-Visitor -u-> UC_Reg
-Visitor -u-> UC_Login
-
-RegUser -u-|> Visitor
-RegUser -d-> UC_Content
-
-Admin -u-|> Visitor
-Admin -d-> UC_Admin
-
-@enduml
-
 Рисунок 1: Загальна схема прецедентів
 
 </div>
