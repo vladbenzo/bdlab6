@@ -64,5 +64,71 @@
 </center>
 
 
+Сценарії взаємодії для Відвідувача
+Реєстрація нового користувача (UserRegister)
+
+Ідентифікатор: UserRegister
+
+Назва: Процес реєстрації нового користувача
+
+Актори: Відвідувач, Система
+
+Передумови: Відвідувач системи не має існуючого облікового запису.
+
+Результат: Створено новий обліковий запис користувача, готовий до використання.
+
+Нештатні ситуації
+
+Надані дані не відповідають очікуваному формату або правилам – InvalidDataException
+Не всі обов'язкові поля реєстраційної форми заповнені – DataMissingException
+Обліковий запис з вказаною електронною поштою вже існує – AlreadyRegisteredException
+
+Основний потік подій
+
+Відвідувач ініціює процес реєстрації (наприклад, натискає кнопку 'Реєстрація').
+Відвідувач заповнює реєстраційну форму (вводить ім'я, прізвище, email, пароль).
+Система приймає дані для реєстрації.
+Система валідує отриману інформацію.
+Система перевіряє, чи не існує вже акаунт з таким email.
+Система створює новий запис про користувача в базі даних.
+Система сповіщає користувача про успішне завершення реєстрації.
+
+<center>
+
+![Діаграма](//www.plantuml.com/plantuml/png/dLHDRzD04BtxLwp4WQJg0IHEyO4MA187EC2Lon9lmggE7TdRGY58AO424Y9I5QKdg2h-W8bYsdoa-Gkp_uWtQqj1wiUX6oNopiwyUU_jn1kfaOdPQOLUkgsZjanaIxoIzUrc4kz4mSCuZ1Dngw7uyr-6h1kzgysUUEy9h0SN2jmgpk8aK4aPl-EMYsycIVoc3DzpouKVnv5veTyfSNUrVoPR2lbQXju7p-lGeHtIc4RyQtiqein-wNXEXrUZ0rhOeJt0zuST2Dkbt0xills8fwm8-yWweeoMT8xYHP7tYSwHCRUzbr45mFFRjhykQ6cxs9mYxSn-etnTg9RK8Hy0h8lwcVrUzPdJ2JBGXNAQKzP1Xr-kvHb30Xyd6LVbJ8Yf0xYFE7HaJ1WOkY4gD2YsWgRWmwbJL29mlohCQnM92WFHj0flQdI8nncxK2hhCs5cDK4efmLblgV2L04N44NDCOjc6Wp41DY5ENZEQChYrvv4kpBKmIDfvDRRkceR7KThFcfJ4xSz5GMwKNBz3S730c36lKzNdb9-9MbKqH9alzBYWYKqHGW8VnW5Dm18-E3S_rmsWjpH3LIndASwJNNKl5xL5b-mi3t6PZfymxG0qkHIDSVExx5h_vTLewv_sTGTtO3qPfWe6UmzLqsT6fMeu6hgDJe1oeY7XkUvC97DAlsZINa_FAO-qdzYCxRxtAripeF46Co8nYir_ZL_EH3O00D-VVm3)
+
+</center>
+
+Аутентифікація користувача (UserLogin)
+
+Ідентифікатор: UserLogin
+
+Назва: Вхід користувача до системи
+
+Актори: Відвідувач (що має акаунт), Система
+
+Передумови: Користувач вже має зареєстрований обліковий запис.
+
+Результат: Користувач успішно аутентифікований та отримує доступ до функцій системи для зареєстрованих користувачів.
+
+Нештатні ситуації
+Вичерпано ліміт невдалих спроб входу – TooManyActionsException
+Надано невірний пароль або email – DataNotFoundException
+Обліковий запис з таким email не знайдено – NotRegisteredException
+
+Основний потік подій
+Користувач відкриває форму автентифікації.
+Користувач вводить свої облікові дані (email та пароль).
+Система приймає запит на вхід.
+Система верифікує надані облікові дані.
+Система перевіряє існування акаунту з вказаним email.
+Система авторизує користувача, надаючи доступ до захищених ресурсів.
+Система інформує користувача про успішний вхід.
+
+<center>
+
+![Діаграма](//www.plantuml.com/plantuml/png/dLDDQnD16BxFhtZ1IzkJWgVcOEj7R_QW7hsCoQGktUo4tQbQZT3kLaG8HAJiGL3n7wnXOoNDnrzuvn_vl9D8X1gGJYwPTvwFvs5cTpAdKtVKYLLs62LTdUeEFTFDmuFK7YMjUpQsATre6_dzXT1D5xs8t36zKOHrzmeXhCMPJLicNSvlXXNcksbgNox7jyCAupsRkCVHQqEtLljztJ70HpfMRvNgyMUU-HF-vKzzxWiUSkNVzrJeeRRvao-vvh40mj4v-RE0d_Y2UEZVyOnhNpG42W0sKCfzdqn7Hp7vd2lYEOWdEBlq_OOuVb-uyOWdNFL0_GeA74GK3dp15JZG8Pw2BpOI0zoeJHlyZKT0ZtW8o0SU0JCZQ9UWb-3uKvu7knztDiazDmbjI0mURogYRR1dO491Xk8sns02yqlKB9ucMq-iVQYJurrSYaso1w-QfYl_jXgWPyvsbKbQKLk5nf11Y3DuZqDqSGrHnkBYI-8QpbDV_ib-ljYI0AG4UBaCraGDHKK8SGUYFqNc0VA34YwiJmB7iC0ebuimSMPW1C1_zhsldTwtRayUtFgs8Vt7bHL90Fn1wtzb1tI8RNXPV24eLBxwqBXg1FGN46le8TKof5mu149ohlcdt3Fi1gj7TvskwFd874IPCwbPNtRzHm783Z3oWVy6)
+
+</center>
 
 </div>
