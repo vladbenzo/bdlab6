@@ -295,9 +295,93 @@
 
 Система відображає результати пошуку користувачеві.
 <div style="text-align: center; margin: auto;">
-</div>
 <center>
 
 ![Діаграма](//www.plantuml.com/plantuml/png/hLFB3j905DtFLqpY1bRkwOP4NR3LBsYW20cs28DnmO82GHT44q9AOdHXuWTKqafvjFp2lN_akHrZ8CY6ID8mcJcFSswdzQ5n1sRqfgVKc3OKyuHINdF8KwmAsb9CEMMqrtIW0bjPUJIJ0_umLYLRrJGjAEU85tW-yLfJ8WjDPt0-0dtWcIC6tosVKZfHF1RUDnWa58F34IHmn1EU0x3dy8R_G41OhB0kO99XVmcOWAmHGcxqKqqxOC42FnH9dacSEG8TUGaIy7VIh-1-12uHoaLSKR6X88rj-3dA3uod1ztN7QEVjDikVeg-0lcBZi0YhqQJ509JYl7as42UJDfWGqRxkQOmiDGsbN-1SIJ6CfSOkLARzsfqgjBmtxczRkkLvmwQdPVUsv4tD2_UDxs-wGP-LNb-IqiwMoaJVUXULz9_TgL-Bfd-Io5TeVDDtd9gkl6yYhfVBarne4MC3j0_0L4Q21pQjAT4O5JyxViiy8tdcqRhJjSVvHnFzds7yfxa0g1hETqTqk02sFGSqTOfvuDL0j1F6JYgojMzXLFsp_i8s9OZvz5lBUWhLKS1-Ln_0m00)
 
 </center>
+Зміна інформації про медіа-контент (ContentUpdate)
+
+Ідентифікатор: ContentUpdate
+
+Назва: Редагування метаданих існуючого медіа-контенту
+
+Актори: Зареєстрований користувач, Система
+
+Передумови: Користувач аутентифікований та має права на редагування конкретного об'єкта контенту.
+
+Результат: Інформація про вказаний медіа-об'єкт оновлена в системі.
+
+Нештатні ситуації:
+
+Спроба редагувати контент за ідентифікатором, якого не існує – InvalidContentIdException
+
+Користувач не має дозволу на редагування цього контенту – PermissionDeniedException
+
+Оновлені дані не пройшли валідацію – InvalidContentDataException
+
+Основний потік подій:
+
+Користувач обирає функцію редагування для певного медіа-об'єкта.
+
+Система надає форму з поточними даними контенту для редагування.
+
+Користувач вносить зміни в поля форми.
+
+Система перевіряє існування контенту, що редагується.
+
+Система перевіряє права користувача на редагування цього контенту.
+
+Система валідує змінені дані.
+
+Система оновлює інформацію про медіа-об'єкт у сховищі.
+
+Система повідомляє користувача про успішне оновлення.
+
+<div style="text-align: center; margin: auto;">
+
+Зміна інформації про медіа-контент (ContentUpdate)
+
+Ідентифікатор: ContentUpdate
+
+Назва: Редагування метаданих існуючого медіа-контенту
+
+Актори: Зареєстрований користувач, Система
+
+Передумови: Користувач аутентифікований та має права на редагування конкретного об'єкта контенту.
+
+Результат: Інформація про вказаний медіа-об'єкт оновлена в системі.
+
+Нештатні ситуації:
+
+Спроба редагувати контент за ідентифікатором, якого не існує – InvalidContentIdException
+
+Користувач не має дозволу на редагування цього контенту – PermissionDeniedException
+
+Оновлені дані не пройшли валідацію – InvalidContentDataException
+
+Основний потік подій:
+
+Користувач обирає функцію редагування для певного медіа-об'єкта.
+
+Система надає форму з поточними даними контенту для редагування.
+
+Користувач вносить зміни в поля форми.
+
+Система перевіряє існування контенту, що редагується.
+
+Система перевіряє права користувача на редагування цього контенту.
+
+Система валідує змінені дані.
+
+Система оновлює інформацію про медіа-об'єкт у сховищі.
+
+Система повідомляє користувача про успішне оновлення.
+
+<div style="text-align: center; margin: auto;">
+<center>
+
+![Діаграма](//www.plantuml.com/plantuml/png/hPJ1gjD058RtynG3RgwlSE_cWdNHdQyGRAu6xaqkxIWkkcXIq2vA0wL446tn3MAjsZQPz1NEUIF_Cp5IIeCWxIR3pFd_-VuvCxqT6AzltZpSApMaZvJpY7xmWcDECAfeJJbPsj9EqvugJ6tTqbWM-CDGERMwrhIaRrWRONQXeJlmUyvufiMEDZ3v3arjPZbrPXWaMBHYToCMSzeUcxWIsZkWf8OuqVrHMO35q2KyrVIBIiwaMjDQkvqjPpSIxclD3cb9-L2aApWBtnge8qwnAGOnsN-WXf7nTJzuzThe9tTt7dwAFgFe9nM0X5AJXVC4cjoHvxhcWs_kpYMzLlJfs1RSMiff3uTITplE0hEYfXroe8mgTTKDtthtGUzP51e_DDtUytSl_KSJHE5JvOSzBMZdaz51phMXoriQSwbmNvmvsjAKyPIgXi7rfU2qXK5TlV3x3y5WW5GTFmpyjf1pA0eqUyFZ-j9PTs4BTwJPKVClbwb-0_YwJ5dxfgUTwdZ6QucnR2nuXXYDmVadif9AYOnl2SNVpbOQXn1ZcF54mfoGkTx-xmkF7fMw1R7yIVm6)
+
+</center>
+</div>
