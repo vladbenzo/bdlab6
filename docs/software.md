@@ -3,8 +3,9 @@
 
 ## SQL-скрипт для створення початкового наповнення бази даних
 
-```init.sql
+_init.sql_
 
+```sql
 CREATE TABLE Tag (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(45) NOT NULL
@@ -132,5 +133,7 @@ CREATE TABLE MediaContentAnalysisResult (
 	FOREIGN KEY (analysisResult_id) REFERENCES AnalysisResult (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-```seed.sql
+_seed.sql_
+
+```sql
 BEGIN;
