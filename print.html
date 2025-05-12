@@ -766,11 +766,70 @@
 <h2 id="Реляційна-схема"><a class="header" href="#Реляційна-схема">Реляційна схема</a></h2>
 <p><img src="//www.plantuml.com/plantuml/png/lLN1QXin4BthAmPVt1PyASsbX12J5bfAIt3TNXTbfTYYMcdHQ1lSfF_UyLhO6LPU9IxaOjWtJs_Ul17o9KOPOjTO8Q9l8NguyJ7w1fG9kex6Eo6cy0DrG91EmS9RZKAxQEAcX-5U0Bm1e-0zVFwsXFFpwoyN5uJDPlHpQmB6oib6K_ddV77rQRvuzUxiDPMiF5RHZJHsWBOIySu71RpmLoGtlRLnDzbkIcCTJBiTzQZqjGwDGIHAkK5U9ANro6D7dzL0Xmg1E8C27vFxuMUuMBjdvYIdy5Kh8w7sBf9yQh43htRO-C14jq-DzErPNxpnQZD4auCgRjgXNXsqZ5fLCbBfmtpvKG2Fxr4yIxawUKTyyeDIiqMhP34RSvIhaPLzzrseJxcRNR0S6uWUJ6B__MntV6Rcj3msxyblrjn9kq63gSt-Uw6niozshSet9vj3rcmv3vcELQ4_Dn8wRv2sM53WwomhjpwSbFF_HyazPAUZmhEccy92MxdTFQvDYwB_xtbucCtyFTiS7LnBLkPP4o6DmadSSfwqVyAfF968PkMqWkWdeWSp9EDgsocDdC6Vy2rlBOboW8uJLq7Ic6eYsCp37FhGYKzfhiZZdOdhYI1iXDeX4OrZjFqZmmWxb7E6_SeUamuTgtsZ4Mw3RvZwKRurxbUAljHaiFs9t29_qd5UVfg0qi7yrYhvpIimjB2D0Pd7pQzc_iAM6t0oQo0kjLDTOyK_" alt="Діаграма" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Реалізація-інформаційного-та-програмного-забезпечення"><a class="header" href="#Реалізація-інформаційного-та-програмного-забезпечення">Реалізація інформаційного та програмного забезпечення</a></h1>
-<p>В рамках проекту розробляється:</p>
-<ul>
-<li>SQL-скрипт для створення на початкового наповнення бази даних</li>
-<li>RESTfull сервіс для управління даними</li>
-</ul>
+<h2 id="sql-скрипт-для-створення-початкового-наповнення-бази-даних"><a class="header" href="#sql-скрипт-для-створення-початкового-наповнення-бази-даних">SQL-скрипт для створення початкового наповнення бази даних</a></h2>
+<pre><code class="language-init.sql">
+CREATE TABLE Tag (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE Role (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(45) NOT NULL,
+	description VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE Permission (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE Profile (
+	id SERIAL PRIMARY KEY,
+	first_name VARCHAR(45) NOT NULL,
+	last_name VARCHAR(45) NOT NULL,
+	email VARCHAR(255) NOT NULL UNIQUE,
+	password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Source (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(45) NOT NULL,
+	url VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE MediaContent (
+	id SERIAL PRIMARY KEY,
+	title VARCHAR(100) NOT NULL,
+	description TEXT,
+	body TEXT NOT NULL,
+	content_type VARCHAR(45) NOT NULL,
+	created_at DATE DEFAULT CURRENT_DATE,
+	profile_id INT NOT NULL,
+	FOREIGN KEY (profile_id) REFERENCES Profile (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE AnalysisReport (
+	id SERIAL PRIMARY KEY,
+	title VARCHAR(45) NOT NULL,
+	body VARCHAR(255) NOT NULL,
+	created_at DATE DEFAULT CURRENT_DATE,
+	profile_id INT NOT NULL,
+	FOREIGN KEY (profile_id) REFERENCES Profile (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE AnalysisResult (
+	id SERIAL PRIMARY KEY,
+	title VARCHAR(45) NOT NULL,
+	description VARCHAR(255),
+	body VARCHAR(255) NOT NULL,
+	created_at DATE DEFAULT CURRENT_DATE,
+	analysisReport_id INT NOT NULL,
+	profile_id INT NOT NULL,
+	FOREIGN KEY (analysisReport_id) REFERENCES AnalysisReport (id) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (profile_id) REFERENCES Profile (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Тестування-працездатності-системи"><a class="header" href="#Тестування-працездатності-системи">Тестування працездатності системи</a></h1>
 <p><em>В цьому розділі необхідно вказати засоби тестування, навести вихідні коди тестів та результати тестування.</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Висновки-1"><a class="header" href="#Висновки-1">Висновки</a></h1>
