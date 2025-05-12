@@ -134,7 +134,7 @@ CREATE TABLE MediaContentAnalysisResult (
 );
 '''
 
-__seed.sql_
+_seed.sql_
 
 ```sql
 BEGIN;
@@ -142,7 +142,3 @@ BEGIN;
 
 
 
-
-
-
-'''
