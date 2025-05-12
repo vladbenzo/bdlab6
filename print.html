@@ -894,15 +894,73 @@ CREATE TABLE MediaContentAnalysisResult (
 	FOREIGN KEY (mediaContent_id) REFERENCES MediaContent (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (analysisResult_id) REFERENCES AnalysisResult (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
-'''
 
-_seed.sql_
+
+```seed.sql
 
 ```sql
 BEGIN;
+INSERT INTO Profile (id, first_name, last_name, email, password) VALUES
+(1, 'Kyrylo', 'Lopushenko', 'lopushenko.kyrylo@gmail.com', adminadmin'),
+(2, 'VLadyslav', 'TSV', 'vladonerovich03@gmail.com', 'vladbenzo'),
+(3, 'Andrey', 'Kekuh', 'kekukhaleksandr@gmail.com', 'papor33'),
+(4, 'John', 'Jo', 'jonjo2@gmail.com', '3321445'),
+(5, 'Shvedenko', 'Ivan ', 'shvedenko.ivan2006@gmail.com', 'ivan32232323'),
+(6, 'David', 'Goliath', 'davidgol@gmail.com', 'sleepingtime'),
+(7, 'Taras', 'Tarasovich', 't.tarasov@gmail.com', 'slon5252'),
+(8, 'Denis, 'Bakaev', 'tankist_is7_maus@gmail.com', 'qwerty21345'),
+(8, 'Anastasia', 'Golovchenko', '3321.d.anasnata@gmail.com', 'passwordpassword'),
+(9, 'Alexey', 'Kovalenko', 'alexey.kovalenko@gmail.com', 'kovalenko88'),
+(10, 'Primo', 'Petrenko', 'prim.petr@yahoo.com', 'pass2s123');
+
+INSERT INTO Tag (id, name) VALUES
+(1, 'Science'),
+(2, 'Technology'),
+(3, 'Health'),
+(4, 'Travel'),
+(5, 'Environment'),
+(6, 'Space Exploration'),
+(7, 'Quantum Computing'),
+(8, 'Renewable Energy'),
+(9, 'Gaming'),
+(10, 'Medicine'),
+(11, 'Market Analysis'),
+(12, 'Customer Insights'),
+(13, 'Product Launch'),
+(14, 'Sales Projections'),
+(15, 'Employee Feedback'),
+(16, 'Social Media'),
+(17, 'Competitor Analysis'),
+(18, 'Logistics'),
+(19, 'User Experience');
+
+INSERT INTO Source (id, name, url) VALUES
+(1, 'National Geographic', 'https://www.nationalgeographic.com'),
+(2, 'TechCrunch', 'https://techcrunch.com'),
+(3, 'NASA', 'https://www.nasa.gov'),
+(4, 'Healthline', 'https://www.healthline.com'),
+(5, 'Quanta Magazine', 'https://www.quantamagazine.org'),
+(6, 'TripAdvisor', 'https://www.tripadvisor.com'),
+(7, 'YouTube', 'https://www.youtube.com'),
+(8, 'GameSpot', 'https://www.gamespot.com'),
+(9, 'PlayStation Blog', 'https://blog.playstation.com'),
+(10, 'MedTech News', 'https://www.medtechnews.com');
+
+INSERT INTO Role (id, name, description) VALUES
+(1, 'User', 'Standard user with basic permissions'),
+(2, 'TechnicalExpert', 'Specialist responsible for technical aspects and content management');
+
+INSERT INTO Permission (id, name) VALUES
+(1, 'user.role.promote'),
+(2, 'user.delete'),
+(3, 'content.create'),
+(4, 'content.search'),
+(5, 'content.update'),
+(6, 'content.delete');
 
 
 
+COMMIT;
 
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Тестування-працездатності-системи"><a class="header" href="#Тестування-працездатності-системи">Тестування працездатності системи</a></h1>
