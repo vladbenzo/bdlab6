@@ -132,8 +132,17 @@ CREATE TABLE MediaContentAnalysisResult (
 	FOREIGN KEY (mediaContent_id) REFERENCES MediaContent (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (analysisResult_id) REFERENCES AnalysisResult (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+'''
 
-_seed.sql_
+__seed.sql_
 
 ```sql
 BEGIN;
+
+
+
+
+
+
+
+'''
