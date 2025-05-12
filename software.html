@@ -157,8 +157,8 @@
                     <main>
                         <h1 id="Реалізація-інформаційного-та-програмного-забезпечення"><a class="header" href="#Реалізація-інформаційного-та-програмного-забезпечення">Реалізація інформаційного та програмного забезпечення</a></h1>
 <h2 id="sql-скрипт-для-створення-початкового-наповнення-бази-даних"><a class="header" href="#sql-скрипт-для-створення-початкового-наповнення-бази-даних">SQL-скрипт для створення початкового наповнення бази даних</a></h2>
-<pre><code class="language-init.sql">
-CREATE TABLE Tag (
+<p><em>init.sql</em></p>
+<pre><code class="language-sql">CREATE TABLE Tag (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(45) NOT NULL
 );
@@ -285,7 +285,9 @@ CREATE TABLE MediaContentAnalysisResult (
 	FOREIGN KEY (analysisResult_id) REFERENCES AnalysisResult (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-```seed.sql
+_seed.sql_
+
+```sql
 BEGIN;
 </code></pre>
 
