@@ -962,6 +962,76 @@ INSERT INTO Permission (id, name) VALUES
 
 COMMIT;
 
+INSERT INTO MediaContent (id, title, description, body, content_type, created_at, profile_id) VALUES
+(1, 'Exploring the Ocean Depths', 'An in-depth exploration into the mysteries of the deep sea environment.', 'The ocean's vast depths hold secrets yet to be fully uncovered, from unique bioluminescent creatures to vast uncharted trenches. This piece reveals some of the enigmatic wonders found beneath the waves.', 'Article', '2025-11-01', 1),
+(2, 'Advancements in AI', 'Exploring the latest breakthroughs in artificial intelligence and machine learning.', 'AI advancements continue to reshape our world, powering everything from smart assistants to autonomous vehicles. Cutting-edge algorithms and deep learning models are driving this technological revolution forward.', 'Article', '2025-11-02', 2),
+(3, 'A Brief History of Space Exploration', 'From early rockets to modern Mars missions.', 'https://youtu.be/3JuKR7jf46o?si=-eG_l82dAemgaZdW', 'Video', '2025-11-03', 3),
+(4, 'Tips for a Healthy Lifestyle', 'Simple, actionable steps to improve overall health and wellbeing.', 'https://www.healthline.com/health/how-to-maintain-a-healthy-lifestyle', 'Blog Post', '2025-11-04', 4),
+(5, 'Understanding Quantum Computing', 'A primer on the fundamental principles of quantum computation.', 'Quantum computing leverages quantum mechanics to process information in new ways, holding the potential for exponential speedups in solving complex problems beyond the reach of classical computers.', 'Article', '2025-11-05', 5),
+(6, 'Top 25 Global Travel Destinations', 'An curated list of must-visit places around the world for travelers.', 'https://www.tripadvisor.com/TravelersChoice-Destinations-cTop-g1', 'Blog Post', '2025-12-06', 6),
+(7, 'The Future of Renewable Energy', 'Examining how sustainable energy sources are shaping our global future.', 'https://youtu.be/zZheOMvPWGc?si=3C6qQHf-jUApOgB0', 'Video', '2025-12-07', 7),
+(8, 'Cyberpunk Cityscape Concept', 'A visual concept of a futuristic city filled with neon lights, advanced tech, high-rise buildings, flying vehicles, and bustling streets.', 'https://www.gamespot.com/a/uploads/original/1179/11799911/4363244-cyberpunk1.jpg', 'Image', '2025-12-08', 8),
+(9, 'Fantasy Battle in Snowy Mountains', 'Artwork depicting an intense battle between a warrior and a formidable opponent in a frozen, mountainous landscape.', 'https://blog.playstation.com/tachyon/2025/09/c31c0e1cae38ef6a23c353e31d87e8b1cd57b700.jpeg', 'Image', '2025-12-09', 9),
+(10, 'Innovations in Modern Healthcare', 'Highlighting new technologies and approaches improving patient care and outcomes.', 'Healthcare innovations, including telemedicine, AI diagnostics, and personalized medicine, are revolutionizing patient care, improving accessibility, and leading to better outcomes for various medical conditions.', 'Article', '2025-12-10', 10);
+
+INSERT INTO AnalysisReport (id, title, body, created_at, profile_id) VALUES
+(1, 'Q1 Performance Review', 'A detailed analysis of key performance indicators for the first quarter.', '2025-01-01', 1),
+(2, 'Market Trend Analysis Report', 'An overview of significant market trends observed during the current quarter.', '2025-01-02', 2),
+(3, 'Customer Feedback Synthesis', 'A summary and analysis of customer feedback collected over the recent period.', '2025-01-03', 1),
+(4, 'New Product Launch Assessment', 'Post-launch analysis evaluating the market reception and initial success of the latest product.', '2025-01-04', 3),
+(5, 'Annual Revenue Forecast Analysis', 'Revenue projection for the upcoming year based on historical data and current market trends.', '2025-01-05', 2),
+(6, 'Employee Satisfaction Survey Report', 'Analysis of results from the recent employee satisfaction and engagement survey.', '2025-01-06', 4),
+(7, 'Social Media Campaign Impact Study', 'An assessment of the reach, engagement, and overall impact of recent social media campaigns.', '2025-01-07', 1),
+(8, 'Competitor Product Benchmarking', 'A comparative analysis of our core product features against key competitors.', '2025-01-08', 3),
+(9, 'Supply Chain Efficiency Evaluation', 'An assessment of the current supply chain performance, identifying key strengths and bottlenecks.', '2025-01-09', 4),
+(10, 'Website User Behavior Analysis', 'Insights into website traffic sources, user navigation patterns, and engagement metrics.', '2025-01-10', 2);
+
+INSERT INTO AnalysisResult (id, title, description, body, created_at, analysisReport_id, profile_id) VALUES
+(1, 'Key Q1 Growth Drivers', 'Identification of the primary factors contributing to business growth in Q1.', 'The analysis highlights market expansion and product innovation as key growth drivers.', '2025-02-01', 1, 1),
+(2, 'Emerging Market Opportunities', 'Assessment of potential high-growth emerging markets.', 'Summary identifies Southeast Asia and Latin America as key regions with favorable trends.', '2025-02-02', 2, 2),
+(3, 'Analysis of Top Customer Concerns', 'Breakdown of the most frequent issues raised by customers via support channels.', 'Detailed analysis points to usability and feature requests as common themes in customer feedback.', '2025-02-03', 3, 1),
+(4, 'Initial Product Launch Performance', 'Evaluation of key performance indicators during the product launch window.', 'In-depth analysis shows strong initial adoption rates and positive user sentiment.', '2025-02-04', 4, 3),
+(5, 'Q3 Sales Projections', 'Forecasted sales figures for the upcoming third quarter.', 'Data-driven sales projections indicate a potential 15% increase based on current trends.', '2025-02-05', 5, 2),
+(6, 'Employee Morale Trend Analysis', 'Insights derived from qualitative and quantitative employee feedback.', 'Analysis indicates a positive trend in overall employee morale compared to the previous period.', '2025-02-06', 6, 4),
+(7, 'Social Media Engagement Metrics', 'Performance overview of recent social media marketing campaigns.', 'Highlights include increased follower engagement rates and wider content reach.', '2025-02-07', 7, 1),
+(8, 'Competitive Pricing Benchmark', 'Comparison of our product pricing structure against main competitors.', 'Comparative analysis reveals opportunities for adjustment in specific market segments.', '2025-02-08', 8, 3),
+(9, 'Logistics Bottleneck Identification', 'Review of logistics processes and identification of efficiency issues.', 'Identified delays primarily occur during the final-mile delivery stage in specific regions.', '2025-02-09', 9, 4),
+(10, 'Website User Journey Mapping', 'Analysis of user navigation paths and interaction patterns on the website.', 'Detailed report maps common user journeys and identifies key conversion points and drop-offs.', '2025-02-10', 10, 2);
+INSERT INTO MediaContent (id, title, description, body, content_type, created_at, profile_id) VALUES
+(1, 'Exploring the Ocean Depths', 'An in-depth exploration into the mysteries of the deep sea environment.', 'The ocean's vast depths hold secrets yet to be fully uncovered, from unique bioluminescent creatures to vast uncharted trenches. This piece reveals some of the enigmatic wonders found beneath the waves.', 'Article', '2025-11-01', 1),
+(2, 'Advancements in AI', 'Exploring the latest breakthroughs in artificial intelligence and machine learning.', 'AI advancements continue to reshape our world, powering everything from smart assistants to autonomous vehicles. Cutting-edge algorithms and deep learning models are driving this technological revolution forward.', 'Article', '2025-11-02', 2),
+(3, 'A Brief History of Space Exploration', 'From early rockets to modern Mars missions.', 'https://youtu.be/3JuKR7jf46o?si=-eG_l82dAemgaZdW', 'Video', '2025-11-03', 3),
+(4, 'Tips for a Healthy Lifestyle', 'Simple, actionable steps to improve overall health and wellbeing.', 'https://www.healthline.com/health/how-to-maintain-a-healthy-lifestyle', 'Blog Post', '2025-11-04', 4),
+(5, 'Understanding Quantum Computing', 'A primer on the fundamental principles of quantum computation.', 'Quantum computing leverages quantum mechanics to process information in new ways, holding the potential for exponential speedups in solving complex problems beyond the reach of classical computers.', 'Article', '2025-11-05', 5),
+(6, 'Top 25 Global Travel Destinations', 'An curated list of must-visit places around the world for travelers.', 'https://www.tripadvisor.com/TravelersChoice-Destinations-cTop-g1', 'Blog Post', '2025-12-06', 6),
+(7, 'The Future of Renewable Energy', 'Examining how sustainable energy sources are shaping our global future.', 'https://youtu.be/zZheOMvPWGc?si=3C6qQHf-jUApOgB0', 'Video', '2025-12-07', 7),
+(8, 'Cyberpunk Cityscape Concept', 'A visual concept of a futuristic city filled with neon lights, advanced tech, high-rise buildings, flying vehicles, and bustling streets.', 'https://www.gamespot.com/a/uploads/original/1179/11799911/4363244-cyberpunk1.jpg', 'Image', '2025-12-08', 8),
+(9, 'Fantasy Battle in Snowy Mountains', 'Artwork depicting an intense battle between a warrior and a formidable opponent in a frozen, mountainous landscape.', 'https://blog.playstation.com/tachyon/2025/09/c31c0e1cae38ef6a23c353e31d87e8b1cd57b700.jpeg', 'Image', '2025-12-09', 9),
+(10, 'Innovations in Modern Healthcare', 'Highlighting new technologies and approaches improving patient care and outcomes.', 'Healthcare innovations, including telemedicine, AI diagnostics, and personalized medicine, are revolutionizing patient care, improving accessibility, and leading to better outcomes for various medical conditions.', 'Article', '2025-12-10', 10);
+
+INSERT INTO AnalysisReport (id, title, body, created_at, profile_id) VALUES
+(1, 'Q1 Performance Review', 'A detailed analysis of key performance indicators for the first quarter.', '2025-01-01', 1),
+(2, 'Market Trend Analysis Report', 'An overview of significant market trends observed during the current quarter.', '2025-01-02', 2),
+(3, 'Customer Feedback Synthesis', 'A summary and analysis of customer feedback collected over the recent period.', '2025-01-03', 1),
+(4, 'New Product Launch Assessment', 'Post-launch analysis evaluating the market reception and initial success of the latest product.', '2025-01-04', 3),
+(5, 'Annual Revenue Forecast Analysis', 'Revenue projection for the upcoming year based on historical data and current market trends.', '2025-01-05', 2),
+(6, 'Employee Satisfaction Survey Report', 'Analysis of results from the recent employee satisfaction and engagement survey.', '2025-01-06', 4),
+(7, 'Social Media Campaign Impact Study', 'An assessment of the reach, engagement, and overall impact of recent social media campaigns.', '2025-01-07', 1),
+(8, 'Competitor Product Benchmarking', 'A comparative analysis of our core product features against key competitors.', '2025-01-08', 3),
+(9, 'Supply Chain Efficiency Evaluation', 'An assessment of the current supply chain performance, identifying key strengths and bottlenecks.', '2025-01-09', 4),
+(10, 'Website User Behavior Analysis', 'Insights into website traffic sources, user navigation patterns, and engagement metrics.', '2025-01-10', 2);
+
+INSERT INTO AnalysisResult (id, title, description, body, created_at, analysisReport_id, profile_id) VALUES
+(1, 'Key Q1 Growth Drivers', 'Identification of the primary factors contributing to business growth in Q1.', 'The analysis highlights market expansion and product innovation as key growth drivers.', '2025-02-01', 1, 1),
+(2, 'Emerging Market Opportunities', 'Assessment of potential high-growth emerging markets.', 'Summary identifies Southeast Asia and Latin America as key regions with favorable trends.', '2025-02-02', 2, 2),
+(3, 'Analysis of Top Customer Concerns', 'Breakdown of the most frequent issues raised by customers via support channels.', 'Detailed analysis points to usability and feature requests as common themes in customer feedback.', '2025-02-03', 3, 1),
+(4, 'Initial Product Launch Performance', 'Evaluation of key performance indicators during the product launch window.', 'In-depth analysis shows strong initial adoption rates and positive user sentiment.', '2025-02-04', 4, 3),
+(5, 'Q3 Sales Projections', 'Forecasted sales figures for the upcoming third quarter.', 'Data-driven sales projections indicate a potential 15% increase based on current trends.', '2025-02-05', 5, 2),
+(6, 'Employee Morale Trend Analysis', 'Insights derived from qualitative and quantitative employee feedback.', 'Analysis indicates a positive trend in overall employee morale compared to the previous period.', '2025-02-06', 6, 4),
+(7, 'Social Media Engagement Metrics', 'Performance overview of recent social media marketing campaigns.', 'Highlights include increased follower engagement rates and wider content reach.', '2025-02-07', 7, 1),
+(8, 'Competitive Pricing Benchmark', 'Comparison of our product pricing structure against main competitors.', 'Comparative analysis reveals opportunities for adjustment in specific market segments.', '2025-02-08', 8, 3),
+(9, 'Logistics Bottleneck Identification', 'Review of logistics processes and identification of efficiency issues.', 'Identified delays primarily occur during the final-mile delivery stage in specific regions.', '2025-02-09', 9, 4),
+(10, 'Website User Journey Mapping', 'Analysis of user navigation paths and interaction patterns on the website.', 'Detailed report maps common user journeys and identifies key conversion points and drop-offs.', '2025-02-10', 10, 2);
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Тестування-працездатності-системи"><a class="header" href="#Тестування-працездатності-системи">Тестування працездатності системи</a></h1>
 <p><em>В цьому розділі необхідно вказати засоби тестування, навести вихідні коди тестів та результати тестування.</em></p>
