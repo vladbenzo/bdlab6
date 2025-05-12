@@ -160,31 +160,31 @@
 <p><em>init.sql</em></p>
 <pre><code class="language-sql">CREATE TABLE Tag (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(45) NOT NULL
+	name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Role (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(45) NOT NULL,
-	description VARCHAR(45) NOT NULL
+	name VARCHAR(255) NOT NULL,
+	description VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Permission (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(45) NOT NULL
+	name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Profile (
 	id SERIAL PRIMARY KEY,
-	first_name VARCHAR(45) NOT NULL,
-	last_name VARCHAR(45) NOT NULL,
+	first_name VARCHAR(255) NOT NULL,
+	last_name VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL UNIQUE,
 	password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Source (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(45) NOT NULL,
+	name VARCHAR(255) NOT NULL,
 	url VARCHAR(255) NOT NULL
 );
 
@@ -193,7 +193,7 @@ CREATE TABLE MediaContent (
 	title VARCHAR(100) NOT NULL,
 	description TEXT,
 	body TEXT NOT NULL,
-	content_type VARCHAR(45) NOT NULL,
+	content_type VARCHAR(255) NOT NULL,
 	created_at DATE DEFAULT CURRENT_DATE,
 	profile_id INT NOT NULL,
 	FOREIGN KEY (profile_id) REFERENCES Profile (id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -201,7 +201,7 @@ CREATE TABLE MediaContent (
 
 CREATE TABLE AnalysisReport (
 	id SERIAL PRIMARY KEY,
-	title VARCHAR(45) NOT NULL,
+	title VARCHAR(255) NOT NULL,
 	body VARCHAR(255) NOT NULL,
 	created_at DATE DEFAULT CURRENT_DATE,
 	profile_id INT NOT NULL,
@@ -210,7 +210,7 @@ CREATE TABLE AnalysisReport (
 
 CREATE TABLE AnalysisResult (
 	id SERIAL PRIMARY KEY,
-	title VARCHAR(45) NOT NULL,
+	title VARCHAR(255) NOT NULL,
 	description VARCHAR(255),
 	body VARCHAR(255) NOT NULL,
 	created_at DATE DEFAULT CURRENT_DATE,
@@ -286,22 +286,22 @@ CREATE TABLE MediaContentAnalysisResult (
 );
 
 
-```seed.sql
+_seed.sql_
 
 ```sql
 BEGIN;
+
 INSERT INTO Profile (id, first_name, last_name, email, password) VALUES
-(1, 'Kyrylo', 'Lopushenko', 'lopushenko.kyrylo@gmail.com', adminadmin'),
-(2, 'VLadyslav', 'TSV', 'vladonerovich03@gmail.com', 'vladbenzo'),
+(1, 'Kyrylo', 'Lopushenko', 'lopushenko.kyrylo@gmail.com', 'adminadmin'),
+(2, 'Vladyslav', 'TSV', 'vladonerovich03@gmail.com', 'vladbenzo'),
 (3, 'Andrey', 'Kekuh', 'kekukhaleksandr@gmail.com', 'papor33'),
 (4, 'John', 'Jo', 'jonjo2@gmail.com', '3321445'),
 (5, 'Shvedenko', 'Ivan ', 'shvedenko.ivan2006@gmail.com', 'ivan32232323'),
 (6, 'David', 'Goliath', 'davidgol@gmail.com', 'sleepingtime'),
 (7, 'Taras', 'Tarasovich', 't.tarasov@gmail.com', 'slon5252'),
-(8, 'Denis, 'Bakaev', 'tankist_is7_maus@gmail.com', 'qwerty21345'),
-(8, 'Anastasia', 'Golovchenko', '3321.d.anasnata@gmail.com', 'passwordpassword'),
-(9, 'Alexey', 'Kovalenko', 'alexey.kovalenko@gmail.com', 'kovalenko88'),
-(10, 'Primo', 'Petrenko', 'prim.petr@yahoo.com', 'pass2s123');
+(8, 'Denis', 'Bakaev', 'tankist_is7_maus@gmail.com', 'qwerty21345'),
+(9, 'Anastasia', 'Golovchenko', '3321.d.anasnata@gmail.com', 'passwordpassword'),
+(10, 'Alexey', 'Kovalenko', 'alexey.kovalenko@gmail.com', 'kovalenko88');
 
 INSERT INTO Tag (id, name) VALUES
 (1, 'Science'),
@@ -565,6 +565,7 @@ INSERT INTO MediaContentAnalysisResult (mediaContent_id, analysisResult_id) VALU
 
 
 COMMIT;
+
 </code></pre>
 
                     </main>
