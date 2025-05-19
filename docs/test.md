@@ -4,32 +4,31 @@
 
 ## Передумови 
 
-
 ## Тестування функціонування сервісів
 
 ### GET: Отримати список усіх елементів медіаконтенту
-![alt text](./test/GetMediaContent.png)
+<img src="./test/GETMediaContent.png" alt="GET: Отримати список усіх елементів медіаконтенту" width="100%"/>
 
 ### GET: Отримати медіаконтент за ID
-![alt text](./test/GetMediaContentID.png)
+<img src="./test/GetMediaContentID.png" alt="GET: Отримати медіаконтент за ID" width="100%"/>
 
 ### POST: Створити новий медіаконтент
-![alt text](./test/POSTMediaContent.png)
+<img src="./test/POSTMediaContent.png" alt="POST: Створити новий медіаконтент" width="100%"/>
 
 ### PUT: Оновити існуючий медіаконтент
-![alt text](./test/PUTMediaContent.png)
+<img src="./test/PUTMediaContent.png" alt="PUT: Оновити існуючий медіаконтент" width="100%"/>
 
 ### DELETE: Видалити медіаконтент за ID
-![alt text](./test/DELETEMediaContent.png)
+<img src="./test/DELETEMediaContent.png" alt="DELETE: Видалити медіаконтент за ID" width="100%"/>
 
 ### POST: Зв'язати Тег з елементом Медіаконтенту
-![alt text](./test/POSTMediaTag.png)
+<img src="./test/POSTMediaTag.png" alt="POST: Зв'язати Тег з елементом Медіаконтенту" width="100%"/>
 
 ### GET: Отримати всі зв'язки між Медіаконтентом та Тегами
-![alt text](./test/GETMediaTags.png)
+<img src="./test/GETMediaTags.png" alt="GET: Отримати всі зв'язки між Медіаконтентом та Тегами" width="100%"/>
 
 ### GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту
-![alt text](./test/GETMediaTagsID.png)
+<img src="./test/GETMediaTagsID.png" alt="GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту" width="100%"/>
 
 ### DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом
-![alt text](./test/DELETEMediaTags.png)
+<img src="./test/DELETEMediaTags.png" alt="DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом" width="100%"/>
