@@ -12,34 +12,31 @@ pip install -r requirements.txt
 
 ### 2 - Запустити сервер:
 ```bash
-uvicorn app.main:app 
+uvicorn app.main:app --reload 
 ```
 
 ## Тестування функціонування сервісів
 
-### GET: Отримати список усіх елементів медіаконтенту
-<img src="./test/GETMediaContent.png" alt="GET: Отримати список усіх елементів медіаконтенту" width="100%"/>
+### GET: Отримує конкретну роль із бази даних за її ID
+<img src="./test/Test Get.png" alt="GET: Отримує конкретну роль із бази даних за її ID" width="100%"/>
 
-### GET: Отримати медіаконтент за ID
-<img src="./test/GetMediaContentID.png" alt="GET: Отримати медіаконтент за ID" width="100%"/>
+### GET: Отримує один дозвіл з бази даних за його ID
+<img src="./test/Test Get1.png" alt="Отримує один дозвіл з бази даних за його ID" width="100%"/>
 
-### POST: Створити новий медіаконтент
-<img src="./test/POSTMediaContent.png" alt="POST: Створити новий медіаконтент" width="100%"/>
+### POST: Створює нову роль у базі даних
+<img src="./test/Test Post.png" alt="POST: Створює нову роль у базі даних" width="100%"/>
 
-### PUT: Оновити існуючий медіаконтент
-<img src="./test/PUTMediaContent.png" alt="PUT: Оновити існуючий медіаконтент" width="100%"/>
+### PUT: Оновлює існуючу роль у базі даних за її ID
+<img src="./test/Test Put.png" alt="Оновлює існуючу роль у базі даних за її ID" width="100%"/>
 
-### DELETE: Видалити медіаконтент за ID
-<img src="./test/DELETEMediaContent.png" alt="DELETE: Видалити медіаконтент за ID" width="100%"/>
+### PUT: Оновлює існуючий дозвіл у базі за його ID
+<img src="./test/Test Put1.png" alt="Оновлює існуючий дозвіл у базі за його ID" width="100%"/>
 
-### POST: Зв'язати Тег з елементом Медіаконтенту
-<img src="./test/POSTMediaTag.png" alt="POST: Зв'язати Тег з елементом Медіаконтенту" width="100%"/>
+### DELETE: Видаляє роль із бази даних за її унікальним ID
+<img src="./test/Test Delete.png" alt="Видаляє роль із бази даних за її унікальним ID" width="100%"/>
 
-### GET: Отримати всі зв'язки між Медіаконтентом та Тегами
-<img src="./test/GETMediaTags.png" alt="GET: Отримати всі зв'язки між Медіаконтентом та Тегами" width="100%"/>
+### DELETE: Видаляє дозвіл з системи за його ID
+<img src="./test/Test Delete1.png" alt="DELETE: Видаляє дозвіл з системи за його ID" width="100%"/>
 
-### GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту
-<img src="./test/GETMediaTagsID.png" alt="GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту" width="100%"/>
-
-### DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом
-<img src="./test/DELETEMediaTags.png" alt="DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом" width="100%"/>
+### POST: Створює новий дозвіл у системі
+<img src="./test/Test Post1.png" alt="POST: Створює новий дозвіл у системі" width="100%"/>
