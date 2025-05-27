@@ -41,6 +41,17 @@
         <script src="toc.js"></script>
     </head>
     <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
     <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
@@ -118,7 +129,7 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -165,24 +176,24 @@
 <pre><code class="language-bash">uvicorn app.main:app 
 </code></pre>
 <h2 id="Тестування-функціонування-сервісів"><a class="header" href="#Тестування-функціонування-сервісів">Тестування функціонування сервісів</a></h2>
-<h3 id="get-Отримати-список-усіх-елементів-медіаконтенту"><a class="header" href="#get-Отримати-список-усіх-елементів-медіаконтенту">GET: Отримати список усіх елементів медіаконтенту</a></h3>
-<img src="./test/GETMediaContent.png" alt="GET: Отримати список усіх елементів медіаконтенту" width="100%"/>
-<h3 id="get-Отримати-медіаконтент-за-id"><a class="header" href="#get-Отримати-медіаконтент-за-id">GET: Отримати медіаконтент за ID</a></h3>
-<img src="./test/GetMediaContentID.png" alt="GET: Отримати медіаконтент за ID" width="100%"/>
-<h3 id="post-Створити-новий-медіаконтент"><a class="header" href="#post-Створити-новий-медіаконтент">POST: Створити новий медіаконтент</a></h3>
-<img src="./test/POSTMediaContent.png" alt="POST: Створити новий медіаконтент" width="100%"/>
-<h3 id="put-Оновити-існуючий-медіаконтент"><a class="header" href="#put-Оновити-існуючий-медіаконтент">PUT: Оновити існуючий медіаконтент</a></h3>
-<img src="./test/PUTMediaContent.png" alt="PUT: Оновити існуючий медіаконтент" width="100%"/>
-<h3 id="delete-Видалити-медіаконтент-за-id"><a class="header" href="#delete-Видалити-медіаконтент-за-id">DELETE: Видалити медіаконтент за ID</a></h3>
-<img src="./test/DELETEMediaContent.png" alt="DELETE: Видалити медіаконтент за ID" width="100%"/>
-<h3 id="post-Звязати-Тег-з-елементом-Медіаконтенту"><a class="header" href="#post-Звязати-Тег-з-елементом-Медіаконтенту">POST: Зв'язати Тег з елементом Медіаконтенту</a></h3>
-<img src="./test/POSTMediaTag.png" alt="POST: Зв'язати Тег з елементом Медіаконтенту" width="100%"/>
-<h3 id="get-Отримати-всі-звязки-між-Медіаконтентом-та-Тегами"><a class="header" href="#get-Отримати-всі-звязки-між-Медіаконтентом-та-Тегами">GET: Отримати всі зв'язки між Медіаконтентом та Тегами</a></h3>
-<img src="./test/GETMediaTags.png" alt="GET: Отримати всі зв'язки між Медіаконтентом та Тегами" width="100%"/>
-<h3 id="get-Отримати-всі-теги-повязані-з-конкретним-елементом-Медіаконтенту"><a class="header" href="#get-Отримати-всі-теги-повязані-з-конкретним-елементом-Медіаконтенту">GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту</a></h3>
-<img src="./test/GETMediaTagsID.png" alt="GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту" width="100%"/>
-<h3 id="delete-Видалити-конкретний-звязок-між-елементом-Медіаконтенту-та-Тегом"><a class="header" href="#delete-Видалити-конкретний-звязок-між-елементом-Медіаконтенту-та-Тегом">DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом</a></h3>
-<img src="./test/DELETEMediaTags.png" alt="DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом" width="100%"/>
+<h3 id="get-Отримати-список-всіх-звязків-користувач-роль"><a class="header" href="#get-Отримати-список-всіх-звязків-користувач-роль">GET: Отримати список всіх зв'язків користувач-роль</a></h3>
+<img src="./test/GETUserRole.png" alt="GET: Отримати список всіх зв'язків користувач-роль" width="100%"/>
+<h3 id="post-Створити-звязок-користувач-роль"><a class="header" href="#post-Створити-звязок-користувач-роль">POST: Створити зв'язок "користувач-роль"</a></h3>
+<img src="./test/POSTUserRole.png" alt="POST: Створити зв'язок користувач-роль" width="100%"/>
+<h3 id="get-Отримати-конкретний-звязок-користувач-роль-за-profile-id-та-role-id"><a class="header" href="#get-Отримати-конкретний-звязок-користувач-роль-за-profile-id-та-role-id">GET: Отримати конкретний зв'язок "користувач-роль" за Profile ID та Role ID</a></h3>
+<img src="./test/GETUserRoleID.png" alt="Отримати конкретний зв'язок користувач-роль за Profile ID та Role ID" width="100%"/>
+<h3 id="delete-Видалити-звязок-користувач-роль"><a class="header" href="#delete-Видалити-звязок-користувач-роль">DELETE: Видалити зв'язок "користувач-роль"</a></h3>
+<img src="./test/DELETEUserRole.png" alt="DELETE: Видалити зв'язок користувач-роль" width="100%"/>
+<h3 id="get-Отримати-список-всіх-профілів"><a class="header" href="#get-Отримати-список-всіх-профілів">GET: Отримати список всіх профілів</a></h3>
+<img src="./test/GETProfile.png" alt="GET: Отримати список всіх профілів" width="100%"/>
+<h3 id="post-Створити-новий-профіль"><a class="header" href="#post-Створити-новий-профіль">POST: Створити новий профіль</a></h3>
+<img src="./test/POSTProfile.png" alt="POST: Створити новий профіль" width="100%"/>
+<h3 id="get-Отримати-профіль-за-id"><a class="header" href="#get-Отримати-профіль-за-id">GET: Отримати профіль за ID</a></h3>
+<img src="./test/GETProfileID.png" alt="GET: Отримати профіль за ID" width="100%"/>
+<h3 id="put-Оновити-профіль-за-id"><a class="header" href="#put-Оновити-профіль-за-id">PUT: Оновити профіль за ID</a></h3>
+<img src="./test/PUTProfileID.png" alt="PUT: Оновити профіль за ID" width="100%"/>
+<h3 id="delete-Видалити-профіль-за-id"><a class="header" href="#delete-Видалити-профіль-за-id">DELETE: Видалити профіль за ID</a></h3>
+<img src="./test/DELETEProfileID.png" alt="Видалити профіль за ID" width="100%"/>
 
                     </main>
 
