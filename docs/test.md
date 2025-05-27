@@ -17,29 +17,29 @@ uvicorn app.main:app
 
 ## Тестування функціонування сервісів
 
-### GET: Отримати список усіх елементів медіаконтенту
-<img src="./test/GETMediaContent.png" alt="GET: Отримати список усіх елементів медіаконтенту" width="100%"/>
+### GET: Отримати список всіх зв'язків користувач-роль
+<img src="./test/GETUserRole.png" alt="GET: Отримати список всіх зв'язків користувач-роль" width="100%"/>
 
-### GET: Отримати медіаконтент за ID
-<img src="./test/GetMediaContentID.png" alt="GET: Отримати медіаконтент за ID" width="100%"/>
+### POST: Створити зв'язок "користувач-роль"
+<img src="./test/POSTUserRole.png" alt="POST: Створити зв'язок користувач-роль" width="100%"/>
 
-### POST: Створити новий медіаконтент
-<img src="./test/POSTMediaContent.png" alt="POST: Створити новий медіаконтент" width="100%"/>
+### GET: Отримати конкретний зв'язок "користувач-роль" за Profile ID та Role ID
+<img src="./test/GETUserRoleID.png" alt="Отримати конкретний зв'язок користувач-роль за Profile ID та Role ID" width="100%"/>
 
-### PUT: Оновити існуючий медіаконтент
-<img src="./test/PUTMediaContent.png" alt="PUT: Оновити існуючий медіаконтент" width="100%"/>
+### DELETE: Видалити зв'язок "користувач-роль"
+<img src="./test/DELETEUserRole.png" alt="DELETE: Видалити зв'язок користувач-роль" width="100%"/>
 
-### DELETE: Видалити медіаконтент за ID
-<img src="./test/DELETEMediaContent.png" alt="DELETE: Видалити медіаконтент за ID" width="100%"/>
+### GET: Отримати список всіх профілів
+<img src="./test/GETProfile.png" alt="GET: Отримати список всіх профілів" width="100%"/>
 
-### POST: Зв'язати Тег з елементом Медіаконтенту
-<img src="./test/POSTMediaTag.png" alt="POST: Зв'язати Тег з елементом Медіаконтенту" width="100%"/>
+### POST: Створити новий профіль
+<img src="./test/POSTProfile.png" alt="POST: Створити новий профіль" width="100%"/>
 
-### GET: Отримати всі зв'язки між Медіаконтентом та Тегами
-<img src="./test/GETMediaTags.png" alt="GET: Отримати всі зв'язки між Медіаконтентом та Тегами" width="100%"/>
+### GET: Отримати профіль за ID
+<img src="./test/GETProfileID.png" alt="GET: Отримати профіль за ID" width="100%"/>
 
-### GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту
-<img src="./test/GETMediaTagsID.png" alt="GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту" width="100%"/>
+### PUT: Оновити профіль за ID
+<img src="./test/PUTProfileID.png" alt="PUT: Оновити профіль за ID" width="100%"/>
 
-### DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом
-<img src="./test/DELETEMediaTags.png" alt="DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом" width="100%"/>
+### DELETE: Видалити профіль за ID
+<img src="./test/DELETEProfileID.png" alt="Видалити профіль за ID" width="100%"/>
