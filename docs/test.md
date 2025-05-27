@@ -18,28 +18,28 @@ uvicorn app.main:app
 ## Тестування функціонування сервісів
 
 ### GET: Отримати список всіх зв'язків користувач-роль
-<img src="./test/GETUserRole.png" alt="GET: Отримати список всіх зв'язків користувач-роль" width="100%"/>
+<img src="./test/GETUserRole.jpg" alt="GET: Отримати список всіх зв'язків користувач-роль" width="100%"/>
 
 ### POST: Створити зв'язок "користувач-роль"
-<img src="./test/POSTUserRole.png" alt="POST: Створити зв'язок користувач-роль" width="100%"/>
+<img src="./test/POSTUserRole.jpg" alt="POST: Створити зв'язок користувач-роль" width="100%"/>
 
 ### GET: Отримати конкретний зв'язок "користувач-роль" за Profile ID та Role ID
-<img src="./test/GETUserRoleID.png" alt="Отримати конкретний зв'язок користувач-роль за Profile ID та Role ID" width="100%"/>
+<img src="./test/GETUserRoleID.jpg" alt="Отримати конкретний зв'язок користувач-роль за Profile ID та Role ID" width="100%"/>
 
 ### DELETE: Видалити зв'язок "користувач-роль"
-<img src="./test/DELETEUserRole.png" alt="DELETE: Видалити зв'язок користувач-роль" width="100%"/>
+<img src="./test/DELETEUserRole.jpg" alt="DELETE: Видалити зв'язок користувач-роль" width="100%"/>
 
 ### GET: Отримати список всіх профілів
-<img src="./test/GETProfile.png" alt="GET: Отримати список всіх профілів" width="100%"/>
+<img src="./test/GETProfile.jpg" alt="GET: Отримати список всіх профілів" width="100%"/>
 
 ### POST: Створити новий профіль
-<img src="./test/POSTProfile.png" alt="POST: Створити новий профіль" width="100%"/>
+<img src="./test/POSTProfile.jpg" alt="POST: Створити новий профіль" width="100%"/>
 
 ### GET: Отримати профіль за ID
-<img src="./test/GETProfileID.png" alt="GET: Отримати профіль за ID" width="100%"/>
+<img src="./test/GETProfileID.jpg" alt="GET: Отримати профіль за ID" width="100%"/>
 
 ### PUT: Оновити профіль за ID
-<img src="./test/PUTProfileID.png" alt="PUT: Оновити профіль за ID" width="100%"/>
+<img src="./test/PUTProfileID.jpg" alt="PUT: Оновити профіль за ID" width="100%"/>
 
 ### DELETE: Видалити профіль за ID
-<img src="./test/DELETEProfileID.png" alt="Видалити профіль за ID" width="100%"/>
+<img src="./test/DELETEProfileID.jpg" alt="Видалити профіль за ID" width="100%"/>
