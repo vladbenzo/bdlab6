@@ -17,29 +17,32 @@ uvicorn app.main:app
 
 ## Тестування функціонування сервісів
 
-### GET: Отримати список усіх елементів медіаконтенту
-<img src="./test/GETMediaContent.png" alt="GET: Отримати список усіх елементів медіаконтенту" width="100%"/>
+### GET: Отримати список усіх елементів тегів
+<img src="./test/get_all_tags.png" alt="GET: Отримати список усіх елементів тегів" width="100%"/>
 
-### GET: Отримати медіаконтент за ID
-<img src="./test/GetMediaContentID.png" alt="GET: Отримати медіаконтент за ID" width="100%"/>
+### GET: Отримати тег за ID
+<img src="./test/get_tags_by_id.png" alt="GET: Отримати тег за ID" width="100%"/>
 
-### POST: Створити новий медіаконтент
-<img src="./test/POSTMediaContent.png" alt="POST: Створити новий медіаконтент" width="100%"/>
+### POST: Створити новий тег
+<img src="./test/post_tags.png" alt="POST: Створити новий тег" width="100%"/>
 
-### PUT: Оновити існуючий медіаконтент
-<img src="./test/PUTMediaContent.png" alt="PUT: Оновити існуючий медіаконтент" width="100%"/>
+### PUT: Оновити існуючий тег
+<img src="./test/put_tags.png" alt="PUT: Оновити існуючий тег" width="100%"/>
 
-### DELETE: Видалити медіаконтент за ID
-<img src="./test/DELETEMediaContent.png" alt="DELETE: Видалити медіаконтент за ID" width="100%"/>
+### DELETE: Видалити тег за ID
+<img src="./test/delete_tags.png" alt="DELETE: Видалити тег за ID" width="100%"/>
 
-### POST: Зв'язати Тег з елементом Медіаконтенту
-<img src="./test/POSTMediaTag.png" alt="POST: Зв'язати Тег з елементом Медіаконтенту" width="100%"/>
+### GET: Отримати список усіх елементів джерела
+<img src="./test/get_all_sources.png" alt="GET: Отримати список усіх елементів джерела" width="100%"/>
 
-### GET: Отримати всі зв'язки між Медіаконтентом та Тегами
-<img src="./test/GETMediaTags.png" alt="GET: Отримати всі зв'язки між Медіаконтентом та Тегами" width="100%"/>
+### GET: Отримати джерело за ID
+<img src="./test/get_sources_by_id.png" alt="GET: Отримати джерело за ID" width="100%"/>
 
-### GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту
-<img src="./test/GETMediaTagsID.png" alt="GET: Отримати всі теги, пов'язані з конкретним елементом Медіаконтенту" width="100%"/>
+### POST: Створити нове джерело
+<img src="./test/post_sources.png" alt="POST: Створити нове джерело" width="100%"/>
 
-### DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом
-<img src="./test/DELETEMediaTags.png" alt="DELETE: Видалити конкретний зв'язок між елементом Медіаконтенту та Тегом" width="100%"/>
+### PUT: Оновити існуюче джерело
+<img src="./test/put_sources.png" alt="PUT: Оновити існуюче джерело" width="100%"/>
+
+### DELETE: Видалити джерело за ID
+<img src="./test/delete_sources.png" alt="DELETE: Видалити джерело за ID" width="100%"/>
