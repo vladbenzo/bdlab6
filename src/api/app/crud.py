@@ -1,10 +1,9 @@
 from .database import database
 from . import schemas
 from asyncpg.exceptions import UniqueViolationError
-from typing import Optional # <--- Додайте цей рядок
+from typing import Optional
 
 
-# --- UserRole (як зв'язуюча таблиця Profile та Role) ---
 async def create_user_role(user_role: schemas.UserRoleAssociationCreate) -> schemas.UserRoleAssociationInDB:
     query = """
     INSERT INTO UserRole (profile_id, role_id)
@@ -34,7 +33,6 @@ async def delete_user_role(profile_id: int, role_id: int):
     row = await database.fetch_one(query, values={"profile_id": profile_id, "role_id": role_id})
     return row is not None
 
-# --- Profile ---
 async def create_profile(profile: schemas.ProfileCreate) -> schemas.ProfileInDB:
     query = """
     INSERT INTO Profile (first_name, last_name, email, password)

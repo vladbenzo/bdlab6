@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI, HTTPException, status
 from . import database, crud, schemas
 from typing import List
 
@@ -11,8 +11,6 @@ async def startup():
 @app.on_event("shutdown")
 async def shutdown():
     await database.database.disconnect()
-
-# --- UserRole Endpoints (для зв'язуючої таблиці Profile-Role) ---
 
 # POST: Додати роль користувачу
 @app.post("/user-roles/", response_model=schemas.UserRoleAssociationInDB, status_code=status.HTTP_201_CREATED)
@@ -42,8 +40,6 @@ async def delete_user_role_association(profile_id: int, role_id: int):
     if not deleted:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="UserRole association not found")
     return {"message": "UserRole association deleted successfully"}
-
-# --- Profile Endpoints ---
 
 # POST: Створити новий профіль
 @app.post("/profiles/", response_model=schemas.ProfileInDB, status_code=status.HTTP_201_CREATED)
