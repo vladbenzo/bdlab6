@@ -12,34 +12,43 @@ pip install -r requirements.txt
 
 ### 2 - Запустити сервер:
 ```bash
-uvicorn app.main:app 
+uvicorn app.main:app --reload
+
 ```
 
 ## Тестування функціонування сервісів
 
-### GET: Отримати список всіх зв'язків користувач-роль
-<img src="./test/GETUserRole.jpg" alt="GET: Отримати список всіх зв'язків користувач-роль" >
+## Analysis Reports
 
-### POST: Створити зв'язок "користувач-роль"
-<img src="./test/POSTUserRole.jpg" alt="POST: Створити зв'язок користувач-роль" >
+### POST /reports/ Create Analysis Report
+<img src="./test/POSTreports 1.png" alt="Зображення тестування POST запиту на ендпоінт /reports/ для створення нового звіту аналізу." >
 
-### GET: Отримати конкретний зв'язок "користувач-роль" за Profile ID та Role ID
-<img src="./test/GETUserRoleID.jpg" alt="Отримати конкретний зв'язок користувач-роль за Profile ID та Role ID" >
+### GET /reports/ Read All Analysis Reports
+<img src="./test/GETreports.png" alt="Зображення тестування GET запиту на ендпоінт /reports/ для отримання списку всіх звітів аналізу." >
 
-### DELETE: Видалити зв'язок "користувач-роль"
-<img src="./test/DELETEUserRole.jpg" alt="DELETE: Видалити зв'язок користувач-роль" >
+### GET /reports/{report_id} Read Single Analysis Report
+<img src="./test/GETreportsID.png" alt="Зображення тестування GET запиту на ендпоінт /reports/{report_id} для отримання одного звіту аналізу за його ID." >
 
-### GET: Отримати список всіх профілів
-<img src="./test/GETProfile.jpg" alt="GET: Отримати список всіх профілів" >
+### PUT /reports/{report_id} Update Analysis Report
+<img src="./test/PUTreports 1.png" alt="Зображення тестування PUT запиту на ендпоінт /reports/{report_id} для оновлення існуючого звіту аналізу." >
 
-### POST: Створити новий профіль
-<img src="./test/POSTProfile.jpg" alt="POST: Створити новий профіль" >
+### DELETE /reports/{report_id} Delete Analysis Report
+<img src="./test/DELETEreports.png" alt="Зображення тестування DELETE запиту на ендпоінт /reports/{report_id} для видалення звіту аналізу." >
 
-### GET: Отримати профіль за ID
-<img src="./test/GETProfileID.jpg" alt="GET: Отримати профіль за ID" >
+## Analysis Results
 
-### PUT: Оновити профіль за ID
-<img src="./test/PUTProfileID.jpg" alt="PUT: Оновити профіль за ID" >
+### POST /results/ Create Analysis Result
 
-### DELETE: Видалити профіль за ID
-<img src="./test/DELETEProfileID.jpg" alt="Видалити профіль за ID" >
+<img src="./test/IMAGE_FOR_POST_RESULTS.png" alt="Зображення тестування POST запиту на ендпоінт /results/ для створення нового результату аналізу." >
+
+### GET /results/ Read All Analysis Results
+<img src="./test/GETresults.png" alt="Зображення тестування GET запиту на ендпоінт /results/ для отримання списку всіх результатів аналізу." >
+
+### GET /results/{result_id} Read Single Analysis Result
+<img src="./test/GETresults id.png" alt="Зображення тестування GET запиту на ендпоінт /results/{result_id} для отримання одного результату аналізу за його ID." >
+
+### PUT /results/{result_id} Update Analysis Result
+<img src="./test/PUTresults 1.png" alt="Зображення тестування PUT запиту на ендпоінт /results/{result_id} для оновлення існуючого результату аналізу." >
+
+### DELETE /results/{result_id} Delete Analysis Result
+<img src="./test/DELETEresults.png" alt="Зображення тестування DELETE запиту на ендпоінт /results/{result_id} для видалення результату аналізу." >
