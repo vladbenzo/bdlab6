@@ -200,7 +200,7 @@
 <li><a href="state-of-the-art.html#%D0%BF%D0%BE%D1%81%D0%B8%D0%BB%D0%B0%D0%BD%D0%BD%D1%8F">Посилання</a></li>
 </ul>
 <h2 id="Основні-визначення"><a class="header" href="#Основні-визначення">Основні визначення</a></h2>
-<p><strong>Медіа-контент</strong> [[1]] – це змістове наповнення цифрових ресурсів, яке об'єднує інформацію різних форматів і способів кодування, зокрема текстову, графічну, аудіо- та відеоматеріали. Його основна мета – задовольняти соціальні, інформаційні та емоційні потреби людини. Таким чином, медіаконтент відіграє ключову роль у сучасному суспільстві, виступаючи важливим засобом подання інформації та комунікації в таких сферах, як культура, освіта, політика й економіка.</p>
+<p><strong>Медіа-контент</strong> [[1]] – це змістове наповнення цифрових ресурсів, яке об'єднує інформацію різних форматів і способів кодування, зокрема текстову, графічну, аудіо- та відеоматеріали. Його основна мета – задовольняти соціальні, інформаційні та емоційні потреби людини. Таким чином, медіаконтент відіграє ключову роль у сучасному суспільстві, виступаючи важливим засобом подання інформації та комунікації в таких сферах, як культура, освіта</p>
 <p><strong>Обробка природної мови (NLP)</strong> [[2]] – це вивчення та застосування методів та інструментів, які дозволяють комп’ютерам обробляти, аналізувати, інтерпретувати та міркувати про людську мову. NLP є міждисциплінарною сферою, яка поєднує в собі методи, розроблені в таких галузях, як лінгвістика та інформатика.</p>
 <p><strong>Інтелектуальний аналіз тексту (Text mining)</strong> [[3]] - інтелектуальний аналіз даних (англ. Data Mining) та штучний інтелект є напрямами, спрямованими на вилучення корисної інформації з текстових документів за допомогою ефективних методів машинного навчання та обробки природної мови. Інтелектуальний аналіз тексту застосовує ті самі підходи до опрацювання інформації, що й аналіз даних, однак між ними існують відмінності. Головна різниця полягає в методах реалізації та характері оброблюваних джерел: інтелектуальний аналіз даних працює переважно зі структурованими базами та сховищами інформації, тоді як аналіз тексту зосереджується на електронних бібліотеках і текстових корпусах.</p>
 <p><strong>Токенізація</strong> [[4]] - Це процес поділу текстового фрагмента на менші складові, звані токенами, які можуть бути окремими словами, фразами, символами або іншими значущими елементами. Такий підхід сприяє спрощенню подальшого аналізу та обробки в межах обробки природної мови (NLP) і текстового аналізу.</p>
@@ -1192,27 +1192,32 @@ COMMIT;
 <pre><code class="language-bash">pip install -r requirements.txt
 </code></pre>
 <h3 id="2---Запустити-сервер"><a class="header" href="#2---Запустити-сервер">2 - Запустити сервер:</a></h3>
-<pre><code class="language-bash">uvicorn app.main:app 
+<pre><code class="language-bash">uvicorn app.main:app --reload
+
 </code></pre>
 <h2 id="Тестування-функціонування-сервісів"><a class="header" href="#Тестування-функціонування-сервісів">Тестування функціонування сервісів</a></h2>
-<h3 id="get-Отримати-список-всіх-звязків-користувач-роль"><a class="header" href="#get-Отримати-список-всіх-звязків-користувач-роль">GET: Отримати список всіх зв'язків користувач-роль</a></h3>
-<img src="./test/GETUserRole.jpg" alt="GET: Отримати список всіх зв'язків користувач-роль" >
-<h3 id="post-Створити-звязок-користувач-роль"><a class="header" href="#post-Створити-звязок-користувач-роль">POST: Створити зв'язок "користувач-роль"</a></h3>
-<img src="./test/POSTUserRole.jpg" alt="POST: Створити зв'язок користувач-роль" >
-<h3 id="get-Отримати-конкретний-звязок-користувач-роль-за-profile-id-та-role-id"><a class="header" href="#get-Отримати-конкретний-звязок-користувач-роль-за-profile-id-та-role-id">GET: Отримати конкретний зв'язок "користувач-роль" за Profile ID та Role ID</a></h3>
-<img src="./test/GETUserRoleID.jpg" alt="Отримати конкретний зв'язок користувач-роль за Profile ID та Role ID" >
-<h3 id="delete-Видалити-звязок-користувач-роль"><a class="header" href="#delete-Видалити-звязок-користувач-роль">DELETE: Видалити зв'язок "користувач-роль"</a></h3>
-<img src="./test/DELETEUserRole.jpg" alt="DELETE: Видалити зв'язок користувач-роль" >
-<h3 id="get-Отримати-список-всіх-профілів"><a class="header" href="#get-Отримати-список-всіх-профілів">GET: Отримати список всіх профілів</a></h3>
-<img src="./test/GETProfile.jpg" alt="GET: Отримати список всіх профілів" >
-<h3 id="post-Створити-новий-профіль"><a class="header" href="#post-Створити-новий-профіль">POST: Створити новий профіль</a></h3>
-<img src="./test/POSTProfile.jpg" alt="POST: Створити новий профіль" >
-<h3 id="get-Отримати-профіль-за-id"><a class="header" href="#get-Отримати-профіль-за-id">GET: Отримати профіль за ID</a></h3>
-<img src="./test/GETProfileID.jpg" alt="GET: Отримати профіль за ID" >
-<h3 id="put-Оновити-профіль-за-id"><a class="header" href="#put-Оновити-профіль-за-id">PUT: Оновити профіль за ID</a></h3>
-<img src="./test/PUTProfileID.jpg" alt="PUT: Оновити профіль за ID" >
-<h3 id="delete-Видалити-профіль-за-id"><a class="header" href="#delete-Видалити-профіль-за-id">DELETE: Видалити профіль за ID</a></h3>
-<img src="./test/DELETEProfileID.jpg" alt="Видалити профіль за ID" >
+<h2 id="analysis-reports"><a class="header" href="#analysis-reports">Analysis Reports</a></h2>
+<h3 id="post-reports-create-analysis-report"><a class="header" href="#post-reports-create-analysis-report">POST /reports/ Create Analysis Report</a></h3>
+<img src="./test/POSTreports 1.png" alt="Зображення тестування POST запиту на ендпоінт /reports/ для створення нового звіту аналізу." >
+<h3 id="get-reports-read-all-analysis-reports"><a class="header" href="#get-reports-read-all-analysis-reports">GET /reports/ Read All Analysis Reports</a></h3>
+<img src="./test/GETreports.png" alt="Зображення тестування GET запиту на ендпоінт /reports/ для отримання списку всіх звітів аналізу." >
+<h3 id="get-reportsreport_id-read-single-analysis-report"><a class="header" href="#get-reportsreport_id-read-single-analysis-report">GET /reports/{report_id} Read Single Analysis Report</a></h3>
+<img src="./test/GETreportsID.png" alt="Зображення тестування GET запиту на ендпоінт /reports/{report_id} для отримання одного звіту аналізу за його ID." >
+<h3 id="put-reportsreport_id-update-analysis-report"><a class="header" href="#put-reportsreport_id-update-analysis-report">PUT /reports/{report_id} Update Analysis Report</a></h3>
+<img src="./test/PUTreports 1.png" alt="Зображення тестування PUT запиту на ендпоінт /reports/{report_id} для оновлення існуючого звіту аналізу." >
+<h3 id="delete-reportsreport_id-delete-analysis-report"><a class="header" href="#delete-reportsreport_id-delete-analysis-report">DELETE /reports/{report_id} Delete Analysis Report</a></h3>
+<img src="./test/DELETEreports.png" alt="Зображення тестування DELETE запиту на ендпоінт /reports/{report_id} для видалення звіту аналізу." >
+<h2 id="analysis-results"><a class="header" href="#analysis-results">Analysis Results</a></h2>
+<h3 id="post-results-create-analysis-result"><a class="header" href="#post-results-create-analysis-result">POST /results/ Create Analysis Result</a></h3>
+<img src="./test/IMAGE_FOR_POST_RESULTS.png" alt="Зображення тестування POST запиту на ендпоінт /results/ для створення нового результату аналізу." >
+<h3 id="get-results-read-all-analysis-results"><a class="header" href="#get-results-read-all-analysis-results">GET /results/ Read All Analysis Results</a></h3>
+<img src="./test/GETresults.png" alt="Зображення тестування GET запиту на ендпоінт /results/ для отримання списку всіх результатів аналізу." >
+<h3 id="get-resultsresult_id-read-single-analysis-result"><a class="header" href="#get-resultsresult_id-read-single-analysis-result">GET /results/{result_id} Read Single Analysis Result</a></h3>
+<img src="./test/GETresults id.png" alt="Зображення тестування GET запиту на ендпоінт /results/{result_id} для отримання одного результату аналізу за його ID." >
+<h3 id="put-resultsresult_id-update-analysis-result"><a class="header" href="#put-resultsresult_id-update-analysis-result">PUT /results/{result_id} Update Analysis Result</a></h3>
+<img src="./test/PUTresults 1.png" alt="Зображення тестування PUT запиту на ендпоінт /results/{result_id} для оновлення існуючого результату аналізу." >
+<h3 id="delete-resultsresult_id-delete-analysis-result"><a class="header" href="#delete-resultsresult_id-delete-analysis-result">DELETE /results/{result_id} Delete Analysis Result</a></h3>
+<img src="./test/DELETEresults.png" alt="Зображення тестування DELETE запиту на ендпоінт /results/{result_id} для видалення результату аналізу." >
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Висновки-1"><a class="header" href="#Висновки-1">Висновки</a></h1>
 <p>У висновках наводять оцінку отриманих результатів, можливі галузі його використання. Висновки повинні містити в собі коротку узагальнену оцінку результатів розробки, у
 тому числі і з погляду на їх технічно-економічну ефективність. Необхідно порівняти
@@ -1220,7 +1225,7 @@ COMMIT;
 <p>Необхідно вказати яке нове технічне рішення покладене в основу проєкту і у чому її
 переваги, що нового було запропоновано самим студентом.</p>
 <p>На базі отриманих висновків можуть надаватися рекомендації по використанню розробки. Вони повинні
-мати конкретний характер і бути цілком підтверджені проєктом.</p>
+мати конкретний характер і бути цілком підтверджені проєктом</p>
 
                     </main>
 
